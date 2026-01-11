@@ -415,10 +415,6 @@ export default function Department() {
                     <td className="text-xs">Active</td>
                   </tr>
                   <tr>
-                    <td className="font-medium text-xs">Established</td>
-                    <td className="text-xs">1998</td>
-                  </tr>
-                  <tr>
                     <td className="font-medium text-xs">Staff</td>
                     <td className="text-xs">24 professionals</td>
                   </tr>

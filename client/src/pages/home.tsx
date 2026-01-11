@@ -120,10 +120,6 @@ export default function Home() {
             </thead>
             <tbody>
               <tr>
-                <td className="font-medium">Founded</td>
-                <td>1998</td>
-              </tr>
-              <tr>
                 <td className="font-medium">Headquarters</td>
                 <td>Washington, D.C.</td>
               </tr>
@@ -152,7 +148,7 @@ export default function Home() {
           leading professional organization dedicated to advancing the field of{" "}
           <span className="wiki-link">complementary medicine</span> through rigorous
           research, comprehensive education, and the establishment of professional
-          standards. Founded in 1998, the Academy serves as the primary accrediting
+          standards. The Academy serves as the primary accrediting
           body and research institution for complementary medical practices in the
           United States and maintains partnerships with institutions across 47 countries.
         </p>
