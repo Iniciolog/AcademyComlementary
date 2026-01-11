@@ -121,7 +121,7 @@ export default function Home() {
             <tbody>
               <tr>
                 <td className="font-medium">Headquarters</td>
-                <td>Washington, D.C.</td>
+                <td>Hollywood, Florida</td>
               </tr>
               <tr>
                 <td className="font-medium">Focus</td>
