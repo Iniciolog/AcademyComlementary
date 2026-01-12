@@ -10,9 +10,9 @@ import {
   FileText,
   Users,
   TrendingUp,
+  Globe,
   CheckCircle,
 } from "lucide-react";
-import logoImage from "@assets/Untitled_logo_10_free-file_1768192548690.jpg";
 
 const departments = [
   {
@@ -93,11 +93,9 @@ export default function Home() {
       <header className="border-b border-wiki-border bg-gradient-to-b from-blue-50/50 to-white">
         <div className="max-w-6xl mx-auto px-6 py-6 pl-16">
           <div className="flex items-start gap-4">
-            <img 
-              src={logoImage} 
-              alt="AACM Logo" 
-              className="w-20 h-20 object-contain flex-shrink-0"
-            />
+            <div className="w-16 h-16 bg-primary/10 rounded flex items-center justify-center flex-shrink-0">
+              <Globe className="w-8 h-8 text-primary" />
+            </div>
             <div>
               <h1 className="text-2xl md:text-3xl font-serif text-foreground border-none pb-0 mb-1">
                 American Academy of Complementary Medicine
