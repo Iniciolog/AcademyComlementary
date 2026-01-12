@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "wouter";
 import { Menu, X, Building2, BarChart3, Search, Award, GraduationCap, FlaskConical, Stethoscope, FileText, Users, ChevronDown, ChevronRight } from "lucide-react";
 import { ScrollArea } from "@/components/ui/scroll-area";
+import logoImage from "@assets/Untitled_logo_10_free-file_1768192548690.jpg";
 
 interface NavItem {
   title: string;
@@ -111,11 +112,14 @@ export function Sidebar() {
         }`}
       >
         <div className="flex items-center justify-between p-4 border-b border-wiki-border bg-gradient-to-r from-blue-50 to-white">
-          <div>
-            <h2 className="font-serif text-lg font-semibold text-primary border-none pb-0 mb-0">
-              AACM
-            </h2>
-            <p className="text-xs text-muted-foreground">Navigation</p>
+          <div className="flex items-center gap-3">
+            <img src={logoImage} alt="AACM" className="w-10 h-10 object-contain" />
+            <div>
+              <h2 className="font-serif text-lg font-semibold text-primary border-none pb-0 mb-0">
+                AACM
+              </h2>
+              <p className="text-xs text-muted-foreground">Navigation</p>
+            </div>
           </div>
           <button
             data-testid="sidebar-close"
