@@ -12,7 +12,7 @@ import {
   TrendingUp,
   CheckCircle,
 } from "lucide-react";
-import logoImage from "@assets/IMG_0283_1768202045319.jpeg";
+import logoImage from "@assets/IMG_0283_1768202691005.jpeg";
 
 const departments = [
   {
@@ -96,7 +96,7 @@ export default function Home() {
             <img 
               src={logoImage} 
               alt="AACM Logo" 
-              className="w-20 h-20 object-contain rounded flex-shrink-0"
+              className="w-20 h-20 object-cover rounded-full flex-shrink-0"
             />
             <div>
               <h1 className="text-2xl md:text-3xl font-serif text-foreground border-none pb-0 mb-1">
