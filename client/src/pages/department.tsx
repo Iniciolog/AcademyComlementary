@@ -176,6 +176,16 @@ const departmentData: Record<
           "Our curriculum specialists work with subject matter experts to create evidence-based educational content. Programs cover foundational knowledge, clinical skills, business practices, and specialized modalities.",
       },
       {
+        title: "Special Initiology",
+        content:
+          "The Special Initiology program includes advanced energy channel training. Key components include the Artra Ven block, a multichannel amplifier of the main Metatron block, designed for enhanced energetic alignment and therapeutic efficacy.",
+      },
+      {
+        title: "Higher Initiology",
+        content:
+          "Following Special Initiology, the Higher Initiology curriculum offers mastery-level instruction in advanced energetic channels. This program represents the pinnacle of initiological training, focusing on complex multidimensional healing modalities.",
+      },
+      {
         title: "Institutional Accreditation",
         content:
           "The department evaluates educational institutions seeking Academy accreditation. Assessment criteria include faculty qualifications, curriculum rigor, clinical training facilities, and graduate outcomes.",
