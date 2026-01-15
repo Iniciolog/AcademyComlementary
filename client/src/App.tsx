@@ -32,13 +32,13 @@ function App() {
   
   return (
     <QueryClientProvider client={queryClient}>
-      <Router base={basePath}>
-        <TooltipProvider>
+      <TooltipProvider>
+        <Router base={basePath}>
           <Toaster />
           <Sidebar />
           <AppRouter />
-        </TooltipProvider>
-      </Router>
+        </Router>
+      </TooltipProvider>
     </QueryClientProvider>
   );
 }
