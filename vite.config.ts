@@ -35,7 +35,7 @@ export default defineConfig({
       plugins: [],
     },
   },
-  base: "/AcademyComlementary/",
+  base: process.env.GITHUB_PAGES === "true" ? "/" : "/AcademyComlementary/",
   root: path.resolve(import.meta.dirname, "client"),
   build: {
     outDir: path.resolve(import.meta.dirname, "dist/public"),
