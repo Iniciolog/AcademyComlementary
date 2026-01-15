@@ -28,12 +28,10 @@ function AppRouter() {
 }
 
 function App() {
-  const basePath = import.meta.env.BASE_URL || "/";
-  
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
-        <Router base={basePath}>
+        <Router>
           <Toaster />
           <Sidebar />
           <AppRouter />
