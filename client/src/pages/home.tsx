@@ -128,14 +128,6 @@ export default function Home() {
                 <td className="font-medium">Focus</td>
                 <td>Complementary Medicine</td>
               </tr>
-              <tr>
-                <td className="font-medium">Affiliated Institutions</td>
-                <td>340+</td>
-              </tr>
-              <tr>
-                <td className="font-medium">Countries</td>
-                <td>47</td>
-              </tr>
             </tbody>
           </table>
         </div>
