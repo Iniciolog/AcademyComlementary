@@ -52,12 +52,13 @@ export function Footer() {
 
           <div>
             <h4 className="font-semibold text-xs uppercase tracking-wider text-muted-foreground mb-4">
-              Contact
+              Registration Data
             </h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li>Hollywood, Florida</li>
-              <li>United States</li>
-              <li>info@aacm.org</li>
+              <li>Entity: American Academy of Complementary Medicine</li>
+              <li>Status: Active</li>
+              <li>Jurisdiction: Florida, USA</li>
+              <li>Document No: [Please Provide]</li>
             </ul>
           </div>
         </div>
