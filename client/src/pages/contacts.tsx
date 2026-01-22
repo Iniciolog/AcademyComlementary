@@ -18,7 +18,6 @@ export default function Contacts() {
           </h1>
         </div>
       </header>
-
       <main className="max-w-4xl mx-auto px-6 py-8 pl-16">
         <p className="text-lg leading-relaxed mb-8">
           The American Academy of Complementary Medicine welcomes inquiries from practitioners, researchers, media, and the public. Please use the contact information below to reach the appropriate department.
@@ -45,9 +44,7 @@ export default function Contacts() {
             <p className="text-sm text-muted-foreground mb-4">
               For general questions about the Academy, membership, or accreditation:
             </p>
-            <a href="mailto:info@aacm.org" className="text-primary hover:underline font-medium">
-              info@aacm.org
-            </a>
+            <a href="mailto:info@aacm.org" className="text-primary hover:underline font-medium">support@aacmedinc.org</a>
           </div>
         </div>
 
