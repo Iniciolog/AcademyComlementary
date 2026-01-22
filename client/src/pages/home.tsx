@@ -279,7 +279,7 @@ export default function Home() {
             International Partnerships
           </h2>
           <p className="text-base leading-relaxed">
-            The Academy maintains collaborative relationships with complementary
+            The Academy establishes collaborative relationships with complementary
             medicine organizations across 47 countries, facilitating the exchange of
             research data, educational resources, and professional standards. Key
             partnership regions include the European Union, Asia-Pacific, and Latin
