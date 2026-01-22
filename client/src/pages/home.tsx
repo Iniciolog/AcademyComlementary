@@ -101,7 +101,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background">
       <header className="border-b border-wiki-border bg-[#ffffff]">
-        <div className="max-w-6xl mx-auto px-6 py-6 pl-16 bg-[#eaf0f7]">
+        <div className="max-w-6xl mx-auto px-6 py-6 pl-16 bg-[#ffffff]">
           <div className="flex items-start gap-4">
             <img 
               src={photo_2026_01_22_16_10_50} 
