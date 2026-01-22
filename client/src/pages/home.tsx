@@ -129,10 +129,6 @@ export default function Home() {
                 <td>Complementary Medicine</td>
               </tr>
               <tr>
-                <td className="font-medium">Members</td>
-                <td>15,000+</td>
-              </tr>
-              <tr>
                 <td className="font-medium">Affiliated Institutions</td>
                 <td>340+</td>
               </tr>
