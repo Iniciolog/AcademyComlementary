@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "wouter";
 import { Menu, X, Building2, BarChart3, Search, Award, GraduationCap, FlaskConical, Stethoscope, FileText, Users, ChevronDown, ChevronRight } from "lucide-react";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import logoImage from "@assets/logo.png";
+import logoImage from "@assets/1111111111 (1).png";
 import _1111111111__1_ from "@assets/1111111111 (1).png";
 
 interface NavItem {

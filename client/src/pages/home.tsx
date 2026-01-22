@@ -12,7 +12,8 @@ import {
   TrendingUp,
   CheckCircle,
 } from "lucide-react";
-import logoImage from "@assets/logo.png";
+import logoImage from "@assets/1111111111 (1).png";
+import groupPhoto from "@assets/IMG_1514_(1)_1769125494892.jpg";
 
 import e3e30799f77d11f093ff9e3e85b3e775_4 from "@assets/e3e30799f77d11f093ff9e3e85b3e775_4.png";
 
@@ -121,6 +122,16 @@ export default function Home() {
       </header>
       <main className="max-w-6xl mx-auto px-6 py-8 pl-16">
         <div className="wiki-infobox hidden md:block">
+          <div className="mb-4 border-b border-wiki-border pb-4">
+            <img 
+              src={groupPhoto} 
+              alt="Professional Collective of the Academy" 
+              className="w-full h-auto rounded shadow-sm"
+            />
+            <p className="text-xs text-center text-muted-foreground mt-2 italic">
+              Professional Collective of the Academy
+            </p>
+          </div>
           <table className="w-full">
             <thead>
               <tr>
