@@ -55,7 +55,6 @@ export function Footer() {
               Registration Data
             </h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li>Entity: American Academy of Complementary Medicine Inc</li>
               <li>Status: Active</li>
               <li>Jurisdiction: Florida, USA</li>
               <li>
