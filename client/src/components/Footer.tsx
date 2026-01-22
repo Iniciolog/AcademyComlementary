@@ -27,6 +27,11 @@ export function Footer() {
                   Contact Us
                 </Link>
               </li>
+              <li>
+                <Link href="/price" className="text-muted-foreground hover:text-primary transition-colors">
+                  Price
+                </Link>
+              </li>
             </ul>
           </div>
 
