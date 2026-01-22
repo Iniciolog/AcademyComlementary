@@ -120,7 +120,7 @@ export default function Home() {
           <table className="w-full">
             <thead>
               <tr>
-                <th colSpan={2} className="text-base">
+                <th colSpan={2} className="text-base bg-[#eeefe8]">
                   Academy Overview
                 </th>
               </tr>
