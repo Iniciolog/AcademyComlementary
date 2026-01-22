@@ -18,7 +18,6 @@ export default function About() {
           </h1>
         </div>
       </header>
-
       <main className="max-w-4xl mx-auto px-6 py-8 pl-16">
         <div className="wiki-infobox float-right ml-6 mb-6 w-72">
           <table className="w-full">
@@ -65,9 +64,7 @@ export default function About() {
           </ul>
 
           <h2 className="text-xl font-serif mt-8 mb-4">Global Reach</h2>
-          <p className="mb-4">
-            Headquartered in Hollywood, Florida, the Academy maintains a robust international presence with partnerships in over 47 countries. Our network facilitates the cross-pollination of knowledge, standardization of practices across borders, and the global advancement of integrative health strategies.
-          </p>
+          <p className="mb-4">The Academy establishes collaborative relationships with complementary medicine organizations across 47 countries, facilitating the exchange of research data, educational resources, and professional standards. </p>
           
           <p className="text-sm text-muted-foreground mt-8 italic">
             Note: Further details from the official documentation are being processed and will be updated shortly.
