@@ -13,7 +13,7 @@ interface Product {
 
 const products: Product[] = [
   {
-    title: "1 - 2 levels",
+    title: "BASIC 1 - 2 levels",
     description:
       "12 video practical lessons that activate the body's energy system",
     price: "$250",
@@ -21,30 +21,30 @@ const products: Product[] = [
     link: "https://interpay.iain.su/store#order",
   },
   {
-    title: "3 level",
+    title: "PROFESSIONAL 3 level",
     description:
-      "A professional level for healing sessions of organs and body systems",
+      "A professional level for healing sessions. 60 energy-restorative channels for any organ and body system",
     price: "$2000",
     link: "https://interpay.iain.su/store#order",
   },
   {
-    title: "4 level",
+    title: "MASTER 4 level",
     description:
       "The level of the Master. Workshops on wellness and energy Security Technologies",
     price: "$2500",
     link: "https://interpay.iain.su/store#order",
   },
   {
-    title: "5 level",
-    description: "10 video practical lessons Teacher level",
+    title: "MASTER - TEACHER 5 level",
+    description: "The Master - Teacher level",
     price: "$3500",
     oldPrice: "$5000",
     link: "https://interpay.iain.su/store#order",
   },
   {
-    title: "Special level",
+    title: "SPECIAL Special level",
     description:
-      "A special level for healing sessions of organs and body systems",
+      "A special level for specific sessions. Group of Social, cleaning, information, energy information security channels ",
     price: "$7000",
     link: "https://interpay.iain.su/store#order",
   },
