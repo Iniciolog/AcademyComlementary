@@ -9,9 +9,7 @@ export function Footer() {
             <h3 className="font-serif text-sm font-semibold text-black mb-4">
               American Academy of Complementary Medicine
             </h3>
-            <p className="text-xs text-muted-foreground leading-relaxed">
-              Advancing the field through research, education, and professional standards since 1998.
-            </p>
+            <p className="text-xs text-muted-foreground leading-relaxed">Advancing the field through research, education, and professional standards </p>
           </div>
           
           <div>
