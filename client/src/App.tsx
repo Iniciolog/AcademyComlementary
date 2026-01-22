@@ -4,8 +4,13 @@ import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { Sidebar } from "@/components/Sidebar";
+import { Footer } from "@/components/Footer";
 import Home from "@/pages/home";
 import Department from "@/pages/department";
+import About from "@/pages/about";
+import Contacts from "@/pages/contacts";
+import Privacy from "@/pages/privacy";
+import Cookies from "@/pages/cookies";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -22,6 +27,10 @@ function Router() {
       <Route path="/diagnostics" component={Department} />
       <Route path="/publications" component={Department} />
       <Route path="/council" component={Department} />
+      <Route path="/about" component={About} />
+      <Route path="/contacts" component={Contacts} />
+      <Route path="/privacy" component={Privacy} />
+      <Route path="/cookies" component={Cookies} />
       <Route component={NotFound} />
     </Switch>
   );
@@ -33,7 +42,10 @@ function App() {
       <TooltipProvider>
         <Toaster />
         <Sidebar />
-        <Router />
+        <div className="flex flex-col min-h-screen">
+          <Router />
+          <Footer />
+        </div>
       </TooltipProvider>
     </QueryClientProvider>
   );

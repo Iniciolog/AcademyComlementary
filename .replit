@@ -44,3 +44,12 @@ waitForPort = 5000
 
 [agent]
 mockupState = "MOCKUP"
+
+[rules]
+
+[rules.formatter]
+
+[rules.formatter.fileExtensions]
+
+[rules.formatter.fileExtensions.".html"]
+id = "module:nodejs-20/formatter:prettier"
