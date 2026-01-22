@@ -135,11 +135,7 @@ export function Sidebar() {
               href="/"
               onClick={() => setIsOpen(false)}
               data-testid="nav-home"
-              className={`flex items-center gap-3 px-3 py-2.5 rounded text-sm mb-1 transition-colors ${
-                location === "/"
-                  ? "bg-blue-50 text-primary font-medium"
-                  : "hover:bg-muted text-foreground"
-              }`}
+              className="flex items-center gap-3 px-3 py-2.5 rounded text-sm mb-1 transition-colors text-primary font-medium bg-[#eeefe8]"
             >
               <Building2 className="w-4 h-4" />
               Main Page
