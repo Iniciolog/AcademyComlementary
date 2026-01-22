@@ -98,7 +98,7 @@ const departments = [
 export default function Home() {
   return (
     <div className="min-h-screen bg-background">
-      <header className="border-b border-wiki-border bg-[#eeefe8]">
+      <header className="border-b border-wiki-border bg-[#eaf0f6]">
         <div className="max-w-6xl mx-auto px-6 py-6 pl-16">
           <div className="flex items-start gap-4">
             <img 
