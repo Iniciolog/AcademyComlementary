@@ -4,6 +4,8 @@ import { Menu, X, Building2, BarChart3, Search, Award, GraduationCap, FlaskConic
 import { ScrollArea } from "@/components/ui/scroll-area";
 import logoImage from "@assets/logo.png";
 
+import e3e30799f77d11f093ff9e3e85b3e775_2 from "@assets/e3e30799f77d11f093ff9e3e85b3e775_2.png";
+
 interface NavItem {
   title: string;
   href: string;
@@ -111,7 +113,7 @@ export function Sidebar() {
       >
         <div className="flex items-center justify-between p-4 border-b border-wiki-border bg-white">
           <div className="flex items-center gap-3">
-            <img src={logoImage} alt="AACM" className="w-10 h-10 object-cover rounded-full" />
+            <img src={e3e30799f77d11f093ff9e3e85b3e775_2} alt="AACM" className="w-10 h-10 object-cover rounded-full" />
             <div>
               <h2 className="font-serif text-sm font-semibold text-black border-none pb-0 mb-0 leading-tight">
                 American Academy of Complementary Medicine
