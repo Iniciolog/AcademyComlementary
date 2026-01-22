@@ -44,7 +44,7 @@ export default function Contacts() {
             <p className="text-sm text-muted-foreground mb-4">
               For general questions about the Academy, membership, or accreditation:
             </p>
-            <a href="mailto:info@aacm.org" className="text-primary hover:underline font-medium">support@aacmedinc.org</a>
+            <a href="mailto:info@aacm.org" className="text-primary hover:underline font-medium">support@aacmedinc.org. americanacademyinc@gmail.com</a>
           </div>
         </div>
 
