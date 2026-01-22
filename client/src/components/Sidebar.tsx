@@ -111,7 +111,7 @@ export function Sidebar() {
       >
         <div className="flex items-center justify-between p-4 border-b border-wiki-border bg-white">
           <div className="flex items-center gap-3">
-            <img src={logoImage} alt="AACM" className="w-10 h-10 object-cover rounded-full" />
+            <img src={logoImage} alt="AACM" className="w-14 h-14 object-cover rounded-full" />
             <div>
               <h2 className="font-serif text-sm font-semibold text-black border-none pb-0 mb-0 leading-tight">
                 American Academy of Complementary Medicine

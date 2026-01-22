@@ -98,7 +98,7 @@ export default function Home() {
             <img 
               src={e3e30799f77d11f093ff9e3e85b3e775_4} 
               alt="AACM Logo" 
-              className="w-20 h-20 object-cover rounded-full flex-shrink-0"
+              className="w-28 h-28 object-cover rounded-full flex-shrink-0"
             />
             <div>
               <h1 className="text-2xl md:text-3xl font-serif text-foreground border-none pb-0 mb-1">
