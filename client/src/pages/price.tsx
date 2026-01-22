@@ -89,12 +89,12 @@ export default function Price() {
                     )}
                   </div>
                   
-                  <a href={product.link} target="_blank" rel="noopener noreferrer" className="w-full block">
-                    <Button className="w-full gap-2 font-semibold">
+                  <div className="w-full block">
+                    <Button className="w-full gap-2 font-semibold" disabled>
                       <ShoppingCart className="w-4 h-4" />
                       Buy Now
                     </Button>
-                  </a>
+                  </div>
                 </div>
               </div>
             </div>
