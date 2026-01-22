@@ -58,7 +58,9 @@ export function Footer() {
               Registration Data
             </h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li>Jurisdiction: Florida, USA</li>
+              <li>Jurisdiction: 7901 4TH ST N, STE 300
+              ST PETERSBURG, FL. 33702
+              United States</li>
               <li>
                 <Link href="/registration" className="text-primary hover:underline">
                   View Official Registration
