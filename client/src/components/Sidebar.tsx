@@ -96,7 +96,6 @@ export function Sidebar() {
       >
         <Menu className="w-5 h-5 text-foreground" />
       </button>
-
       {isOpen && (
         <div
           data-testid="sidebar-overlay"
@@ -104,7 +103,6 @@ export function Sidebar() {
           onClick={() => setIsOpen(false)}
         />
       )}
-
       <aside
         data-testid="sidebar"
         className={`fixed top-0 left-0 z-50 h-full w-80 bg-white border-r border-wiki-border shadow-xl transform transition-transform duration-300 ease-in-out ${
@@ -221,7 +219,7 @@ export function Sidebar() {
                 advancing the field through research, education, and
                 professional standards.
               </p>
-              <p className="text-[11px]">© 2024 AACM. All rights reserved.</p>
+              <p className="text-[11px]">© 2026 AACM. All rights reserved.</p>
             </div>
           </nav>
         </ScrollArea>
