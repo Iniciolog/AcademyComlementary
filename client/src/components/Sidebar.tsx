@@ -3,9 +3,6 @@ import { Link, useLocation } from "wouter";
 import { Menu, X, Building2, BarChart3, Search, Award, GraduationCap, FlaskConical, Stethoscope, FileText, Users, ChevronDown, ChevronRight } from "lucide-react";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import logoImage from "@assets/logo.png";
-
-import e3e30799f77d11f093ff9e3e85b3e775_2 from "@assets/e3e30799f77d11f093ff9e3e85b3e775_2.png";
-
 import _1111111111__1_ from "@assets/1111111111 (1).png";
 
 interface NavItem {
