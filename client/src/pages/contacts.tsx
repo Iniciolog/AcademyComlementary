@@ -56,7 +56,7 @@ export default function Contacts() {
           </div>
           <div className="p-4 border border-wiki-border rounded">
             <h3 className="font-semibold text-sm mb-2">Research Department</h3>
-            <a href="mailto:research@aacm.org" className="text-sm text-primary hover:underline">research@aacm.org</a>
+            <a href="mailto:research@aacm.org" className="text-sm text-primary hover:underline">research@aacmedinc.org</a>
           </div>
           <div className="p-4 border border-wiki-border rounded">
             <h3 className="font-semibold text-sm mb-2">Media Relations</h3>
