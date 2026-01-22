@@ -52,7 +52,7 @@ export default function Contacts() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="p-4 border border-wiki-border rounded">
             <h3 className="font-semibold text-sm mb-2">Accreditation Office</h3>
-            <a href="mailto:accreditation@aacm.org" className="text-sm text-primary hover:underline">accreditation@aacm.org</a>
+            <a href="mailto:accreditation@aacm.org" className="text-sm text-primary hover:underline">accreditation@aacmedinc.org</a>
           </div>
           <div className="p-4 border border-wiki-border rounded">
             <h3 className="font-semibold text-sm mb-2">Research Department</h3>
