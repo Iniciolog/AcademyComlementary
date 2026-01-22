@@ -11,6 +11,7 @@ import About from "@/pages/about";
 import Contacts from "@/pages/contacts";
 import Privacy from "@/pages/privacy";
 import Cookies from "@/pages/cookies";
+import Registration from "@/pages/registration";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -31,6 +32,7 @@ function Router() {
       <Route path="/contacts" component={Contacts} />
       <Route path="/privacy" component={Privacy} />
       <Route path="/cookies" component={Cookies} />
+      <Route path="/registration" component={Registration} />
       <Route component={NotFound} />
     </Switch>
   );
