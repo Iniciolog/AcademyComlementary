@@ -14,36 +14,40 @@ interface Product {
 const products: Product[] = [
   {
     title: "1 - 2 levels",
-    description: "12 video practical lessons that activate the body's energy system",
+    description:
+      "12 video practical lessons that activate the body's energy system",
     price: "$250",
     oldPrice: "$300",
-    link: "https://interpay.iain.su/store#order"
+    link: "https://interpay.iain.su/store#order",
   },
   {
     title: "3 level",
-    description: "A professional level for healing sessions of organs and body systems",
+    description:
+      "A professional level for healing sessions of organs and body systems",
     price: "$2000",
-    link: "https://interpay.iain.su/store#order"
+    link: "https://interpay.iain.su/store#order",
   },
   {
     title: "4 level",
-    description: "The level of the Master. Workshops on wellness and energy Security Technologies",
+    description:
+      "The level of the Master. Workshops on wellness and energy Security Technologies",
     price: "$2500",
-    link: "https://interpay.iain.su/store#order"
+    link: "https://interpay.iain.su/store#order",
   },
   {
     title: "5 level",
     description: "10 video practical lessons Teacher level",
     price: "$3500",
     oldPrice: "$5000",
-    link: "https://interpay.iain.su/store#order"
+    link: "https://interpay.iain.su/store#order",
   },
   {
     title: "Special level",
-    description: "A special level for healing sessions of organs and body systems",
+    description:
+      "A special level for healing sessions of organs and body systems",
     price: "$7000",
-    link: "https://interpay.iain.su/store#order"
-  }
+    link: "https://interpay.iain.su/store#order",
+  },
 ];
 
 export default function Price() {
@@ -62,7 +66,8 @@ export default function Price() {
             Educational Programs Pricing
           </h1>
           <p className="text-muted-foreground text-sm md:text-base mt-2">
-            Distance learning training programs and energy practice of complementary medicine
+            Distance learning training programs and energy practice of
+            complementary medicine
           </p>
         </div>
       </header>
@@ -70,7 +75,10 @@ export default function Price() {
       <main className="max-w-6xl mx-auto px-6 py-12 pl-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {products.map((product, index) => (
-            <div key={index} className="flex flex-col h-full border border-wiki-border rounded-lg bg-card hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+            <div
+              key={index}
+              className="flex flex-col h-full border border-wiki-border rounded-lg bg-card hover:shadow-lg transition-shadow duration-300 overflow-hidden"
+            >
               <div className="p-6 flex-1 flex flex-col">
                 <h3 className="text-xl font-serif font-semibold text-primary mb-3">
                   {product.title}
@@ -78,17 +86,19 @@ export default function Price() {
                 <p className="text-muted-foreground text-sm mb-6 flex-1 leading-relaxed">
                   {product.description}
                 </p>
-                
+
                 <div className="mt-auto pt-6 border-t border-wiki-border">
                   <div className="flex items-baseline gap-2 mb-4">
-                    <span className="text-3xl font-bold text-foreground">{product.price}</span>
+                    <span className="text-3xl font-bold text-foreground">
+                      {product.price}
+                    </span>
                     {product.oldPrice && (
                       <span className="text-sm text-muted-foreground line-through decoration-destructive/50">
                         {product.oldPrice}
                       </span>
                     )}
                   </div>
-                  
+
                   <div className="w-full block">
                     <Button className="w-full gap-2 font-semibold" disabled>
                       <ShoppingCart className="w-4 h-4" />
@@ -100,12 +110,15 @@ export default function Price() {
             </div>
           ))}
         </div>
-        
+
         <div className="mt-12 p-6 bg-slate-50 border border-wiki-border rounded-lg text-sm text-muted-foreground">
-          <h4 className="font-semibold text-foreground mb-2">Note regarding payments</h4>
+          <h4 className="font-semibold text-foreground mb-2">
+            Note regarding payments
+          </h4>
           <p>
-            You will be redirected to our secure payment partner to complete your transaction. 
-            After purchase, you will receive access instructions via email.
+            You will be redirected to our secure payment partner to complete
+            your transaction. After purchase, you will receive access
+            instructions via email.
           </p>
         </div>
       </main>

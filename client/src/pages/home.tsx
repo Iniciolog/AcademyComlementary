@@ -16,6 +16,8 @@ import logoImage from "@assets/logo.png";
 
 import e3e30799f77d11f093ff9e3e85b3e775_4 from "@assets/e3e30799f77d11f093ff9e3e85b3e775_4.png";
 
+import _77777 from "@assets/77777.png";
+
 const departments = [
   {
     title: "Industry Analytics Department",
@@ -96,7 +98,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-6 py-6 pl-16">
           <div className="flex items-start gap-4">
             <img 
-              src={e3e30799f77d11f093ff9e3e85b3e775_4} 
+              src={_77777} 
               alt="AACM Logo" 
               className="w-20 h-20 object-cover rounded-full flex-shrink-0"
             />
