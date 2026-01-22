@@ -40,7 +40,7 @@ const products: Product[] = [
   },
   {
     title: "Special level",
-    description: "A professional level for healing sessions of organs and body systems",
+    description: "A special level for healing sessions of organs and body systems",
     price: "$7000",
     link: "https://interpay.iain.su/store#order"
   }
