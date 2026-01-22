@@ -22,6 +22,8 @@ import e3e30799f77d11f093ff9e3e85b3e775_2 from "@assets/e3e30799f77d11f093ff9e3e
 
 import photo_2026_01_22_16_10_52 from "@assets/photo_2026-01-22 16.10.52.jpeg";
 
+import photo_2026_01_22_16_10_50 from "@assets/photo_2026-01-22 16.10.50.jpeg";
+
 const departments = [
   {
     title: "Industry Analytics Department",
@@ -102,7 +104,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-6 py-6 pl-16">
           <div className="flex items-start gap-4">
             <img 
-              src={photo_2026_01_22_16_10_52} 
+              src={photo_2026_01_22_16_10_50} 
               alt="AACM Logo" 
               className="w-20 h-20 object-cover rounded-full flex-shrink-0"
             />
