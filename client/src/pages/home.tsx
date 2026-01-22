@@ -128,7 +128,7 @@ export default function Home() {
               alt="Professional Collective of the Academy" 
               className="w-full h-auto rounded shadow-sm"
             />
-            <p className="text-xs text-center mt-2 italic bg-[#d6d6d6] text-[#000000]">Professional Collective of the Academy 
+            <p className="text-xs text-center mt-2 italic text-[#000000] bg-[#f1f2f2]">Professional Collective of the Academy 
             7901 4TH ST N, STE 300 ST PETERSBURG</p>
           </div>
           <table className="w-full">
