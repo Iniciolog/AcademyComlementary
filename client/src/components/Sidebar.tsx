@@ -202,6 +202,17 @@ export function Sidebar() {
               </div>
             ))}
 
+            <div className="my-3 border-t border-wiki-border" />
+            
+            <a 
+              href="https://platform.aacmedinc.org/members/login" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-2 mx-3 py-2.5 bg-primary text-primary-foreground rounded text-sm font-medium hover:bg-primary/90 transition-colors mb-2 shadow-sm"
+            >
+              Log in / Sign up
+            </a>
+
             <div className="my-4 border-t border-wiki-border" />
 
             <div className="px-3 py-2 text-xs text-muted-foreground">
