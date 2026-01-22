@@ -20,19 +20,19 @@ const products: Product[] = [
     link: "https://interpay.iain.su/store#order"
   },
   {
-    title: "3 level of Initiology",
+    title: "3 level",
     description: "A professional level for healing sessions of organs and body systems",
     price: "$2000",
     link: "https://interpay.iain.su/store#order"
   },
   {
-    title: "4 level of Initiology",
-    description: "The level of the Master of Initiology. Workshops on wellness and energy Security Technologies",
+    title: "4 level",
+    description: "The level of the Master. Workshops on wellness and energy Security Technologies",
     price: "$2500",
     link: "https://interpay.iain.su/store#order"
   },
   {
-    title: "5 level of Initiology",
+    title: "5 level",
     description: "10 video practical lessons Teacher level",
     price: "$3500",
     oldPrice: "$5000",
