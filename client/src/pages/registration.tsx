@@ -18,7 +18,6 @@ export default function Registration() {
           </h1>
         </div>
       </header>
-
       <main className="max-w-4xl mx-auto px-6 py-8 pl-16">
         <div className="p-6 bg-slate-50 border border-wiki-border rounded-lg mb-8">
           <div className="flex items-center gap-3 mb-4">
@@ -72,9 +71,11 @@ export default function Registration() {
             <section>
               <h4 className="text-sm font-bold uppercase text-muted-foreground mb-2">Article V: Registered Agent</h4>
               <p>REGISTERED AGENTS INC.<br />7901 4TH ST N, STE 300<br />ST PETERSBURG, FL. 33702</p>
-              <p className="text-sm text-muted-foreground mt-2 italic">
-                "I certify that I am familiar with and accept the responsibilities of registered agent."
-              </p>
+              <p className="text-sm text-muted-foreground mt-2 italic">"I certify that I am familiar with and accept the responsibilities of registered agent." 
+
+              The initial officers) and/or directors) of the corporation is/are:
+              Title: P
+              VYACHESLAV LAZARENKO </p>
             </section>
             
              <section className="pt-4 border-t border-slate-200">
