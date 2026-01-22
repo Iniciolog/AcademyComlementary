@@ -110,7 +110,7 @@ export function Sidebar() {
           isOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
-        <div className="flex items-center justify-between p-4 border-b border-wiki-border bg-[#eeefe8]">
+        <div className="flex items-center justify-between p-4 border-b border-wiki-border bg-[#ffffff]">
           <div className="flex items-center gap-3">
             <img src={_1111111111__1_} alt="AACM" className="w-10 h-10 object-cover rounded-full" />
             <div>
