@@ -12,7 +12,7 @@ import {
   TrendingUp,
   CheckCircle,
 } from "lucide-react";
-import logoImage from "@assets/IMG_0283_1768202691005.jpeg";
+import logoImage from "@assets/logo.png";
 
 const departments = [
   {
@@ -90,7 +90,7 @@ const departments = [
 export default function Home() {
   return (
     <div className="min-h-screen bg-background">
-      <header className="border-b border-wiki-border bg-gradient-to-b from-blue-50/50 to-white">
+      <header className="border-b border-wiki-border bg-white">
         <div className="max-w-6xl mx-auto px-6 py-6 pl-16">
           <div className="flex items-start gap-4">
             <img 
