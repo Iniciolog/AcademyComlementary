@@ -139,7 +139,7 @@ export default function Home() {
           research, comprehensive education, and the establishment of professional
           standards. The Academy serves as the primary accrediting
           body and research institution for complementary medical practices in the
-          United States and maintains partnerships with institutions across 47 countries.
+          United States and establishes partnerships with institutions across 47 countries.
         </p>
 
         <p className="text-base leading-relaxed mb-6">
