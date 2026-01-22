@@ -109,7 +109,6 @@ export default function Home() {
           </div>
         </div>
       </header>
-
       <main className="max-w-6xl mx-auto px-6 py-8 pl-16">
         <div className="wiki-infobox hidden md:block">
           <table className="w-full">
@@ -123,7 +122,7 @@ export default function Home() {
             <tbody>
               <tr>
                 <td className="font-medium">Headquarters</td>
-                <td>Hollywood, Florida</td>
+                <td>Florida, USA</td>
               </tr>
               <tr>
                 <td className="font-medium">Focus</td>
