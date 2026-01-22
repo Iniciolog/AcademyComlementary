@@ -31,7 +31,7 @@ export default function Contacts() {
             </h2>
             <address className="not-italic text-sm leading-relaxed text-muted-foreground">
               American Academy of Complementary Medicine<br />
-              Hollywood, Florida<br />
+              Florida<br />
               United States of America
             </address>
           </div>

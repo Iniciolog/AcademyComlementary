@@ -35,7 +35,7 @@ export default function About() {
               </tr>
               <tr>
                 <td className="p-2 border-b border-slate-200 font-semibold text-xs">Headquarters</td>
-                <td className="p-2 border-b border-slate-200 text-xs">Hollywood, Florida, USA</td>
+                <td className="p-2 border-b border-slate-200 text-xs">Florida, USA</td>
               </tr>
               <tr>
                 <td className="p-2 border-b border-slate-200 font-semibold text-xs">Fields</td>
