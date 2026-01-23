@@ -1,4 +1,5 @@
 import { Link } from "wouter";
+import { Phone, Send, MessageCircle } from "lucide-react";
 
 export function Footer() {
   return (
@@ -10,6 +11,34 @@ export function Footer() {
               American Academy of Complementary Medicine
             </h3>
             <p className="text-xs text-muted-foreground leading-relaxed">Advancing the field through research, education, and professional standards </p>
+            
+            <div className="flex gap-4 mt-6">
+              <a 
+                href="tel:+17867899632" 
+                className="text-muted-foreground hover:text-primary transition-colors" 
+                title="Phone: +1 (786) 789-9632"
+              >
+                <Phone className="w-5 h-5" />
+              </a>
+              <a 
+                href="https://t.me/aacmedinc" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-muted-foreground hover:text-primary transition-colors" 
+                title="Telegram: @aacmedinc"
+              >
+                <Send className="w-5 h-5" />
+              </a>
+              <a 
+                href="https://wa.me/17867899632" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-muted-foreground hover:text-primary transition-colors" 
+                title="WhatsApp: +1 (786) 789-9632"
+              >
+                <MessageCircle className="w-5 h-5" />
+              </a>
+            </div>
           </div>
           
           <div>
