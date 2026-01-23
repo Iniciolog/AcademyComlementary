@@ -28,6 +28,15 @@ export function LanguageSwitcher() {
       >
         <span className="text-xl">🇩🇪</span>
       </Button>
+      <Button
+        variant="ghost"
+        size="sm"
+        className={`h-8 w-8 p-0 rounded-full overflow-hidden ${i18n.language === "ru" ? "bg-muted" : ""}`}
+        onClick={() => toggleLanguage("ru")}
+        title="Русский"
+      >
+        <span className="text-xl">🇷🇺</span>
+      </Button>
     </div>
   );
 }
