@@ -13,6 +13,14 @@ import {
   ArrowLeft,
   ExternalLink,
 } from "lucide-react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import { Card, CardContent } from "@/components/ui/card";
 
 const departmentData: Record<
   string,
@@ -370,6 +378,13 @@ export default function Department() {
             <div className="wiki-toc mb-6">
               <div className="wiki-toc-title">Contents</div>
               <ol className="list-decimal list-inside space-y-1 text-sm">
+                {slug === "awards" && (
+                  <li>
+                    <a href="#faces-of-year" className="wiki-link">
+                      Faces of the Year 2026
+                    </a>
+                  </li>
+                )}
                 {data.sections.map((section, idx) => (
                   <li key={idx}>
                     <a
@@ -387,6 +402,39 @@ export default function Department() {
                 </li>
               </ol>
             </div>
+
+            {slug === "awards" && (
+              <section id="faces-of-year" className="mb-8">
+                <h2 className="text-lg font-serif mb-4">Faces of the Year 2026</h2>
+                <div className="px-12">
+                  <Carousel className="w-full max-w-xl mx-auto">
+                    <CarouselContent>
+                      {[
+                        "https://i.ebayimg.com/00/s/OTUwWDk2Ng==/z/r-cAAOSwRJli1lIq/$_57.PNG?set_id=880000500F",
+                        "https://img-s-msn-com.akamaized.net/tenant/amp/entityid/AA1DUJHJ.img?w=1280&h=720&m=4&q=100",
+                        "https://avatars.dzeninfra.ru/get-zen_doc/1592246/pub_6020e2925fadcc22a9d7624d_6020fc985fadcc22a90ba927/scale_1200"
+                      ].map((src, index) => (
+                        <CarouselItem key={index}>
+                          <div className="p-1">
+                            <Card className="border-none shadow-none">
+                              <CardContent className="flex aspect-video items-center justify-center p-0 overflow-hidden rounded-md bg-muted/20">
+                                <img 
+                                  src={src} 
+                                  alt={`Face of the Year 2026 - ${index + 1}`} 
+                                  className="w-full h-full object-contain"
+                                />
+                              </CardContent>
+                            </Card>
+                          </div>
+                        </CarouselItem>
+                      ))}
+                    </CarouselContent>
+                    <CarouselPrevious />
+                    <CarouselNext />
+                  </Carousel>
+                </div>
+              </section>
+            )}
 
             {data.sections.map((section, idx) => (
               <section key={idx} className="mb-6" id={`section-${idx}`}>
