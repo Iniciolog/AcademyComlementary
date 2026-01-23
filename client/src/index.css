@@ -180,6 +180,14 @@
   width: 22em;
   max-width: 100%;
 }
+
+@media (max-width: 768px) {
+  .wiki-infobox {
+    float: none;
+    width: 100%;
+    margin: 0 0 1.5em 0;
+  }
+}
 .wiki-infobox th {
   text-align: center;
   background: hsl(210 40% 94%);

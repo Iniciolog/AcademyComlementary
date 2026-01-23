@@ -121,7 +121,7 @@ export default function Home() {
         </div>
       </header>
       <main className="max-w-6xl mx-auto px-6 py-8 pl-16">
-        <div className="wiki-infobox hidden md:block">
+        <div className="wiki-infobox">
           <div className="mb-4 border-b border-wiki-border pb-4">
             <img 
               src={groupPhoto} 
