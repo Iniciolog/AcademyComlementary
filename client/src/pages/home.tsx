@@ -121,7 +121,7 @@ export default function Home() {
         </div>
       </header>
       <main className="max-w-6xl mx-auto px-6 py-8 pl-16">
-        <div className="wiki-infobox">
+        <div className="wiki-infobox hidden md:block">
           <div className="mb-4 border-b border-wiki-border pb-4">
             <img 
               src={groupPhoto} 
@@ -171,6 +171,37 @@ export default function Home() {
           <span className="wiki-link">market analysis</span>, and{" "}
           <span className="wiki-link">clinical research</span> coordination.
         </p>
+
+        <div className="wiki-infobox block md:hidden mb-8">
+          <div className="mb-4 border-b border-wiki-border pb-4">
+            <img 
+              src={groupPhoto} 
+              alt="Professional Collective of the Academy" 
+              className="w-full h-auto rounded shadow-sm"
+            />
+            <p className="text-xs text-center mt-2 italic text-[#000000] bg-[#f1f2f2]">Professional Collective of the Academy 
+            7901 4TH ST N, STE 300 ST PETERSBURG</p>
+          </div>
+          <table className="w-full">
+            <thead>
+              <tr>
+                <th colSpan={2} className="text-base bg-[#eeefe8]">
+                  Academy Overview
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="font-medium">Headquarters</td>
+                <td>Florida, USA</td>
+              </tr>
+              <tr>
+                <td className="font-medium">Focus</td>
+                <td>Complementary Medicine</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
         <div className="wiki-toc mb-8">
           <div className="wiki-toc-title">Contents</div>
