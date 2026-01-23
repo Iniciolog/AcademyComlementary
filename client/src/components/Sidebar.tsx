@@ -1,7 +1,9 @@
 import { useState } from "react";
 import { Link, useLocation } from "wouter";
+import { useTranslation } from "react-i18next";
 import { Menu, X, Building2, BarChart3, Search, Award, GraduationCap, FlaskConical, Stethoscope, FileText, Users, ChevronDown, ChevronRight } from "lucide-react";
 import { ScrollArea } from "@/components/ui/scroll-area";
+import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import logoImage from "@assets/1111111111 (1).png";
 import _1111111111__1_ from "@assets/1111111111 (1).png";
 
@@ -13,73 +15,74 @@ interface NavItem {
   children?: { title: string; href: string }[];
 }
 
-const navigation: NavItem[] = [
-  {
-    title: "Industry Analytics",
-    href: "/analytics",
-    icon: <BarChart3 className="w-4 h-4" />,
-    description: "Complementary medicine industry analysis",
-  },
-  {
-    title: "Marketing & Market Research",
-    href: "/marketing",
-    icon: <Search className="w-4 h-4" />,
-    description: "Services and specialists market research",
-  },
-  {
-    title: "Expertise & Accreditation",
-    href: "/accreditation",
-    icon: <Building2 className="w-4 h-4" />,
-    description: "Monitoring, credentials, and verified outcomes",
-  },
-  {
-    title: "Rating Monitoring",
-    href: "/ratings",
-    icon: <BarChart3 className="w-4 h-4" />,
-    description: "Specialist, service, and organization ratings",
-  },
-  {
-    title: "Awards & Honors",
-    href: "/awards",
-    icon: <Award className="w-4 h-4" />,
-    description: "Recognition of distinguished professionals",
-  },
-  {
-    title: "Educational Programs",
-    href: "/education",
-    icon: <GraduationCap className="w-4 h-4" />,
-    description: "Professional development and training",
-  },
-  {
-    title: "Scientific Research",
-    href: "/research",
-    icon: <FlaskConical className="w-4 h-4" />,
-    description: "Academic studies and clinical trials",
-  },
-  {
-    title: "Diagnostic Methods",
-    href: "/diagnostics",
-    icon: <Stethoscope className="w-4 h-4" />,
-    description: "Complementary diagnostic approaches",
-  },
-  {
-    title: "Research Publications",
-    href: "/publications",
-    icon: <FileText className="w-4 h-4" />,
-    description: "International and regional data reports",
-  },
-  {
-    title: "Expert Council",
-    href: "/council",
-    icon: <Users className="w-4 h-4" />,
-    description: "Recommendations from leading specialists",
-  },
-];
-
 export function Sidebar() {
   const [isOpen, setIsOpen] = useState(false);
   const [location] = useLocation();
   const [expandedItems, setExpandedItems] = useState<string[]>([]);
+  const { t } = useTranslation();
+
+  const navigation: NavItem[] = [
+    {
+      title: t("nav.industry_analytics"),
+      href: "/analytics",
+      icon: <BarChart3 className="w-4 h-4" />,
+      description: t("departments.analytics.description"),
+    },
+    {
+      title: t("nav.marketing_research"),
+      href: "/marketing",
+      icon: <Search className="w-4 h-4" />,
+      description: t("departments.marketing.description"),
+    },
+    {
+      title: t("nav.expertise_accreditation"),
+      href: "/accreditation",
+      icon: <Building2 className="w-4 h-4" />,
+      description: t("departments.accreditation.description"),
+    },
+    {
+      title: t("nav.rating_monitoring"),
+      href: "/ratings",
+      icon: <BarChart3 className="w-4 h-4" />,
+      description: t("departments.ratings.description"),
+    },
+    {
+      title: t("nav.awards_honors"),
+      href: "/awards",
+      icon: <Award className="w-4 h-4" />,
+      description: t("departments.awards.description"),
+    },
+    {
+      title: t("nav.educational_programs"),
+      href: "/education",
+      icon: <GraduationCap className="w-4 h-4" />,
+      description: t("departments.education.description"),
+    },
+    {
+      title: t("nav.scientific_research"),
+      href: "/research",
+      icon: <FlaskConical className="w-4 h-4" />,
+      description: t("departments.research.description"),
+    },
+    {
+      title: t("nav.diagnostic_methods"),
+      href: "/diagnostics",
+      icon: <Stethoscope className="w-4 h-4" />,
+      description: t("departments.diagnostics.description"),
+    },
+    {
+      title: t("nav.research_publications"),
+      href: "/publications",
+      icon: <FileText className="w-4 h-4" />,
+      description: t("departments.publications.description"),
+    },
+    {
+      title: t("nav.expert_council"),
+      href: "/council",
+      icon: <Users className="w-4 h-4" />,
+      description: t("departments.council.description"),
+    },
+  ];
 
   const toggleExpand = (href: string) => {
     setExpandedItems((prev) =>
@@ -113,10 +116,13 @@ export function Sidebar() {
         <div className="flex items-center justify-between p-4 border-b border-wiki-border bg-[#ffffff]">
           <div className="flex items-center gap-3">
             <img src={_1111111111__1_} alt="AACM" className="w-10 h-10 object-cover rounded-full" />
-            <div>
+            <div className="flex flex-col gap-1">
               <h2 className="font-serif text-sm font-semibold text-black border-none pb-0 mb-0 leading-tight">
-                American Academy of Complementary Medicine
+                {t("common.academy_name")}
               </h2>
+              <div className="flex justify-start">
+                <LanguageSwitcher />
+              </div>
             </div>
           </div>
           <button
@@ -138,13 +144,13 @@ export function Sidebar() {
               className="flex items-center gap-3 px-3 py-2.5 rounded text-sm mb-1 transition-colors text-primary font-medium bg-[#e8ecef]"
             >
               <Building2 className="w-4 h-4" />
-              Main Page
+              {t("nav.main_page")}
             </Link>
 
             <div className="my-3 border-t border-wiki-border" />
 
             <p className="px-3 py-2 text-xs font-semibold text-muted-foreground uppercase tracking-wide">
-              Departments
+              {t("nav.departments")}
             </p>
 
             {navigation.map((item) => (
@@ -205,18 +211,16 @@ export function Sidebar() {
               rel="noopener noreferrer"
               className="flex items-center justify-center gap-2 mx-3 py-2.5 bg-primary text-primary-foreground rounded text-sm font-medium hover:bg-primary/90 transition-colors mb-2 shadow-sm"
             >
-              Log in / Sign up
+              {t("common.login_signup")}
             </a>
 
             <div className="my-4 border-t border-wiki-border" />
 
             <div className="px-3 py-2 text-xs text-muted-foreground">
               <p className="mb-2">
-                The American Academy of Complementary Medicine is dedicated to
-                advancing the field through research, education, and
-                professional standards.
+                {t("common.tagline")}
               </p>
-              <p className="text-[11px]">© 2026 AACM. All rights reserved.</p>
+              <p className="text-[11px]">{t("common.all_rights_reserved")}</p>
             </div>
           </nav>
         </ScrollArea>

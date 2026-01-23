@@ -1,7 +1,10 @@
 import { Link } from "wouter";
 import { ArrowLeft, FileText, CheckCircle } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 export default function Registration() {
+  const { t } = useTranslation();
+
   return (
     <div className="min-h-screen bg-background">
       <header className="border-b border-wiki-border bg-gradient-to-b from-blue-50/50 to-white">
@@ -11,10 +14,10 @@ export default function Registration() {
             className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary mb-3"
           >
             <ArrowLeft className="w-4 h-4" />
-            Back to Main Page
+            {t("common.back_home")}
           </Link>
           <h1 className="text-2xl md:text-3xl font-serif text-foreground">
-            Corporate Registration
+            {t("registration.title")}
           </h1>
         </div>
       </header>
@@ -23,62 +26,62 @@ export default function Registration() {
           <div className="flex items-center gap-3 mb-4">
             <FileText className="w-6 h-6 text-primary" />
             <h2 className="text-lg font-serif font-semibold">
-              Electronic Articles of Incorporation
+              {t("registration.electronic_articles")}
             </h2>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
             <div>
-              <p className="text-xs text-muted-foreground uppercase tracking-wider mb-1">Document Number</p>
+              <p className="text-xs text-muted-foreground uppercase tracking-wider mb-1">{t("registration.doc_number")}</p>
               <p className="font-mono bg-white border border-slate-200 px-2 py-1 rounded inline-block">
                 P25000001859
               </p>
             </div>
             <div>
-              <p className="text-xs text-muted-foreground uppercase tracking-wider mb-1">Status</p>
+              <p className="text-xs text-muted-foreground uppercase tracking-wider mb-1">{t("registration.status")}</p>
               <div className="flex items-center gap-2 text-green-700 font-medium">
                 <CheckCircle className="w-4 h-4" />
-                Active / Good Standing
+                {t("registration.active_standing")}
               </div>
             </div>
           </div>
         </div>
 
         <div className="prose prose-slate max-w-none border-t border-wiki-border pt-8">
-          <h3 className="text-xl font-serif mb-6">Official Corporate Details</h3>
+          <h3 className="text-xl font-serif mb-6">{t("registration.official_details")}</h3>
           
           <div className="space-y-8">
             <section>
-              <h4 className="text-sm font-bold uppercase text-muted-foreground mb-2">Article I: Corporate Name</h4>
+              <h4 className="text-sm font-bold uppercase text-muted-foreground mb-2">{t("registration.article_1")}</h4>
               <p className="text-lg font-serif">AMERICAN ACADEMY OF COMPLEMENTARY MEDICINE INC</p>
             </section>
 
             <section>
-              <h4 className="text-sm font-bold uppercase text-muted-foreground mb-2">Article II: Principal Office</h4>
+              <h4 className="text-sm font-bold uppercase text-muted-foreground mb-2">{t("registration.article_2")}</h4>
               <p>7901 4TH ST N, STE 300<br />ST PETERSBURG, FL. 33702<br />United States</p>
             </section>
 
             <section>
-              <h4 className="text-sm font-bold uppercase text-muted-foreground mb-2">Article III: Purpose</h4>
-              <p>The purpose for which this corporation is organized is: ANY AND ALL LAWFUL BUSINESS.</p>
+              <h4 className="text-sm font-bold uppercase text-muted-foreground mb-2">{t("registration.article_3")}</h4>
+              <p>{t("registration.article_3_desc")}</p>
             </section>
 
             <section>
-              <h4 className="text-sm font-bold uppercase text-muted-foreground mb-2">Article IV: Authorized Shares</h4>
-              <p>The number of shares the corporation is authorized to issue is: 10,000,000</p>
+              <h4 className="text-sm font-bold uppercase text-muted-foreground mb-2">{t("registration.article_4")}</h4>
+              <p>{t("registration.article_4_desc")}</p>
             </section>
 
             <section>
-              <h4 className="text-sm font-bold uppercase text-muted-foreground mb-2">Article V: Registered Agent</h4>
+              <h4 className="text-sm font-bold uppercase text-muted-foreground mb-2">{t("registration.article_5")}</h4>
               <p>REGISTERED AGENTS INC.<br />7901 4TH ST N, STE 300<br />ST PETERSBURG, FL. 33702</p>
-              <p className="text-sm text-muted-foreground italic mt-[0px] mb-[0px] font-bold">President of the corporation is/are: VYACHESLAV LAZARENKO Email americanacademyinc@gmail.com</p>
+              <p className="text-sm text-muted-foreground italic mt-[0px] mb-[0px] font-bold">{t("registration.president")}</p>
             </section>
             
              <section className="pt-4 border-t border-slate-200">
-              <h4 className="text-sm font-bold uppercase text-muted-foreground mb-2">Filing Information</h4>
+              <h4 className="text-sm font-bold uppercase text-muted-foreground mb-2">{t("registration.filing_info")}</h4>
               <p className="text-sm">
-                <span className="font-semibold">Filer:</span> kcostello<br/>
-                <span className="font-semibold">Jurisdiction:</span> Florida Profit Corporation
+                <span className="font-semibold">{t("registration.filer")}</span> kcostello<br/>
+                <span className="font-semibold">{t("registration.jurisdiction_label")}</span> {t("registration.jurisdiction_val")}
               </p>
             </section>
           </div>

@@ -8,6 +8,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+import { useTranslation } from "react-i18next";
 
 interface Association {
   name: string;
@@ -18,82 +19,84 @@ interface Association {
   description: string;
 }
 
-const associations: Association[] = [
-  {
-    name: "Parapsychological Association (PA)",
-    country: "USA",
-    city: "Durham, NC",
-    field: "Parapsychology",
-    website: "parapsych.org",
-    description: "Founded in 1957; promotes parapsychology as a science, integrates findings with other branches; affiliated with AAAS."
-  },
-  {
-    name: "Society for Psychical Research (SPR)",
-    country: "UK",
-    city: "London",
-    field: "Parapsychology",
-    website: "spr.ac.uk",
-    description: "Investigates psychokinesis, past lives, mediums, psychics, apparitions, poltergeists, near-death and out-of-body experiences."
-  },
-  {
-    name: "Australian Institute of Parapsychological Research",
-    country: "Australia",
-    city: "—",
-    field: "Parapsychology",
-    website: "aiprinc.org",
-    description: "Non-profit organization (since 1977); research in parapsychology, reincarnation, and anomalous cognition."
-  },
-  {
-    name: "Yoga Alliance",
-    country: "USA",
-    city: "—",
-    field: "Yoga",
-    website: "yogaalliance.org",
-    description: "Non-profit organization; supports yoga teachers, schools, and supporters; expands access and inclusivity."
-  },
-  {
-    name: "International Yoga Federation (IYF)",
-    country: "International",
-    city: "—",
-    field: "Yoga",
-    website: "—",
-    description: "Non-profit federation; unites practitioners, teachers, centers, and organizations; highest body is the General Assembly."
-  },
-  {
-    name: "World Yoga Association",
-    country: "International",
-    city: "—",
-    field: "Yoga",
-    website: "world-yoga.org",
-    description: "Certifies teachers, schools, clubs, associations, and federations; preserves authenticity of yoga, promotes professional development and cultural exchange."
-  },
-  {
-    name: "Yoga Alliance International",
-    country: "International",
-    city: "—",
-    field: "Yoga",
-    website: "yogaallianceinternational.org",
-    description: "International organization promoting authentic yoga traditions and certification standards globally."
-  },
-  {
-    name: "Association of Specialists in Alternative Medicine and Wellness Practices (ASNMOP)",
-    country: "Russia",
-    city: "Moscow",
-    field: "Alternative Medicine",
-    website: "asnmop.ru",
-    description: "Professional association uniting specialists in alternative medicine and wellness practices; focuses on standards and development of the field."
-  },
-  {
-    name: "International Academy of Initiology",
-    country: "International",
-    city: "—",
-    field: "Initiology",
-    website: "iain.su",
-    description: "International academy dedicated to the study, research, and practice of initiology."
-  }
-];
-
 export default function Associations() {
+  const { t } = useTranslation();
+
+  const associations: Association[] = [
+    {
+      name: "Parapsychological Association (PA)",
+      country: "USA",
+      city: "Durham, NC",
+      field: "Parapsychology",
+      website: "parapsych.org",
+      description: t("associations.items.pa")
+    },
+    {
+      name: "Society for Psychical Research (SPR)",
+      country: "UK",
+      city: "London",
+      field: "Parapsychology",
+      website: "spr.ac.uk",
+      description: t("associations.items.spr")
+    },
+    {
+      name: "Australian Institute of Parapsychological Research",
+      country: "Australia",
+      city: "—",
+      field: "Parapsychology",
+      website: "aiprinc.org",
+      description: t("associations.items.aipr")
+    },
+    {
+      name: "Yoga Alliance",
+      country: "USA",
+      city: "—",
+      field: "Yoga",
+      website: "yogaalliance.org",
+      description: t("associations.items.ya")
+    },
+    {
+      name: "International Yoga Federation (IYF)",
+      country: "International",
+      city: "—",
+      field: "Yoga",
+      website: "—",
+      description: t("associations.items.iyf")
+    },
+    {
+      name: "World Yoga Association",
+      country: "International",
+      city: "—",
+      field: "Yoga",
+      website: "world-yoga.org",
+      description: t("associations.items.wya")
+    },
+    {
+      name: "Yoga Alliance International",
+      country: "International",
+      city: "—",
+      field: "Yoga",
+      website: "yogaallianceinternational.org",
+      description: t("associations.items.yai")
+    },
+    {
+      name: "Association of Specialists in Alternative Medicine and Wellness Practices (ASNMOP)",
+      country: "Russia",
+      city: "Moscow",
+      field: "Alternative Medicine",
+      website: "asnmop.ru",
+      description: t("associations.items.asnmop")
+    },
+    {
+      name: "International Academy of Initiology",
+      country: "International",
+      city: "—",
+      field: "Initiology",
+      website: "iain.su",
+      description: t("associations.items.iain")
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-background">
       <header className="border-b border-wiki-border bg-gradient-to-b from-blue-50/50 to-white">
@@ -104,15 +107,15 @@ export default function Associations() {
             data-testid="back-link"
           >
             <ArrowLeft className="w-4 h-4" />
-            Back to Main Page
+            {t("common.back_home")}
           </Link>
           <div className="flex items-start gap-4">
             <div>
               <h1 className="text-xl md:text-2xl font-serif text-foreground border-none pb-0 mb-1">
-                Professional Associations
+                {t("associations.title")}
               </h1>
               <p className="text-sm text-muted-foreground">
-                American Academy of Complementary Medicine
+                {t("common.academy_name")}
               </p>
             </div>
           </div>
@@ -122,18 +125,18 @@ export default function Associations() {
       <main className="max-w-5xl mx-auto px-6 py-8 pl-16">
         <article>
           <p className="text-base leading-relaxed mb-8">
-            The following list includes recognized international and regional associations in the fields of parapsychology, yoga, and complementary medicine. These organizations work to maintain professional standards, conduct research, and promote their respective disciplines.
+            {t("associations.description")}
           </p>
 
           <div className="rounded-md border border-wiki-border overflow-hidden">
             <Table>
               <TableHeader className="bg-[#eeefe8]">
                 <TableRow>
-                  <TableHead className="font-semibold text-foreground w-[250px]">Organization</TableHead>
-                  <TableHead className="font-semibold text-foreground w-[120px]">Location</TableHead>
-                  <TableHead className="font-semibold text-foreground w-[120px]">Field</TableHead>
-                  <TableHead className="font-semibold text-foreground w-[150px]">Website</TableHead>
-                  <TableHead className="font-semibold text-foreground">Description</TableHead>
+                  <TableHead className="font-semibold text-foreground w-[250px]">{t("associations.table.organization")}</TableHead>
+                  <TableHead className="font-semibold text-foreground w-[120px]">{t("associations.table.location")}</TableHead>
+                  <TableHead className="font-semibold text-foreground w-[120px]">{t("associations.table.field")}</TableHead>
+                  <TableHead className="font-semibold text-foreground w-[150px]">{t("associations.table.website")}</TableHead>
+                  <TableHead className="font-semibold text-foreground">{t("associations.table.description")}</TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
@@ -170,9 +173,9 @@ export default function Associations() {
         </article>
 
         <footer className="border-t border-wiki-border pt-6 mt-12 text-xs text-muted-foreground">
-          <p className="mb-2">This list was last updated on January 23, 2026.</p>
+          <p className="mb-2">{t("common.last_edited")}</p>
           <p>
-            The American Academy of Complementary Medicine is not directly affiliated with these external organizations unless explicitly stated.
+            {t("associations.disclaimer")}
           </p>
         </footer>
       </main>

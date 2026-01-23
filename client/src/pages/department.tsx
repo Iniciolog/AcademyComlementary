@@ -23,312 +23,273 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { Card, CardContent } from "@/components/ui/card";
-
-const departmentData: Record<
-  string,
-  {
-    title: string;
-    icon: React.ReactNode;
-    description: string;
-    sections: { title: string; content: string }[];
-    relatedLinks: { title: string; href: string }[];
-  }
-> = {
-  analytics: {
-    title: "Industry Analytics Department",
-    icon: <BarChart3 className="w-8 h-8" />,
-    description:
-      "The Industry Analytics Department conducts comprehensive analysis of the complementary medicine sector, providing stakeholders with actionable insights into market dynamics, growth trends, and emerging opportunities.",
-    sections: [
-      {
-        title: "Mission",
-        content:
-          "To provide accurate, timely, and actionable market intelligence that supports strategic decision-making across the complementary medicine industry. Our analyses inform practitioners, investors, policymakers, and educational institutions.",
-      },
-      {
-        title: "Core Activities",
-        content:
-          "The department maintains ongoing surveillance of market conditions including practitioner demographics, service utilization patterns, consumer spending trends, and regulatory developments. Quarterly reports synthesize data from multiple sources to produce comprehensive industry overviews.",
-      },
-      {
-        title: "Research Methodology",
-        content:
-          "Our analytical framework combines quantitative market data with qualitative assessments from industry experts. Primary data collection includes practitioner surveys, consumer panels, and institutional reporting. Secondary analysis incorporates regulatory filings, academic publications, and international datasets.",
-      },
-    ],
-    relatedLinks: [
-      { title: "Marketing & Market Research", href: "/marketing" },
-      { title: "Research Publications", href: "/publications" },
-      { title: "Rating Monitoring", href: "/ratings" },
-    ],
-  },
-  marketing: {
-    title: "Marketing & Market Research Department",
-    icon: <Search className="w-8 h-8" />,
-    description:
-      "The Marketing & Market Research Department specializes in understanding consumer behavior, practitioner positioning, and service delivery models within the complementary medicine ecosystem.",
-    sections: [
-      {
-        title: "Research Focus",
-        content:
-          "Our research examines how patients discover and select complementary medicine practitioners, the factors influencing treatment adherence, and the communication strategies that build trust between practitioners and patients.",
-      },
-      {
-        title: "Market Segmentation",
-        content:
-          "The department maintains detailed segmentation models covering geographic markets, practice specialties, patient demographics, and service delivery formats. These models support targeted outreach and resource allocation decisions.",
-      },
-      {
-        title: "Competitive Analysis",
-        content:
-          "Regular competitive intelligence reports track market share dynamics, pricing trends, and differentiation strategies across the industry. Benchmarking studies help practitioners understand their positioning relative to peers.",
-      },
-    ],
-    relatedLinks: [
-      { title: "Industry Analytics", href: "/analytics" },
-      { title: "Rating Monitoring", href: "/ratings" },
-      { title: "Expert Council", href: "/council" },
-    ],
-  },
-  accreditation: {
-    title: "Expertise & Accreditation Department",
-    icon: <Building2 className="w-8 h-8" />,
-    description:
-      "The Expertise & Accreditation Department serves as the Academy's primary credentialing body, establishing and maintaining standards for practitioner qualification, institutional accreditation, and outcome verification.",
-    sections: [
-      {
-        title: "Credentialing Standards",
-        content:
-          "We maintain comprehensive standards covering educational requirements, clinical competencies, ethical conduct, and continuing education. These standards are developed through collaboration with practitioners, educators, and regulatory bodies.",
-      },
-      {
-        title: "Outcome Monitoring",
-        content:
-          "The department operates an outcome tracking system that collects data on treatment results, patient satisfaction, and adverse events. This information supports both individual practitioner evaluation and aggregate quality improvement initiatives.",
-      },
-      {
-        title: "Verification Processes",
-        content:
-          "Our verification protocols confirm the accuracy of reported credentials, validate claimed outcomes, and authenticate patient testimonials. This rigorous approach ensures the integrity of the Academy's accreditation.",
-      },
-    ],
-    relatedLinks: [
-      { title: "Educational Programs", href: "/education" },
-      { title: "Rating Monitoring", href: "/ratings" },
-      { title: "Expert Council", href: "/council" },
-    ],
-  },
-  ratings: {
-    title: "Rating Monitoring Department",
-    icon: <TrendingUp className="w-8 h-8" />,
-    description:
-      "The Rating Monitoring Department maintains dynamic rating systems for practitioners, services, organizations, and methodologies, providing transparent quality indicators for patients and stakeholders.",
-    sections: [
-      {
-        title: "Rating Methodology",
-        content:
-          "Our multi-dimensional rating system incorporates objective measures (credentials, outcomes, experience) and subjective assessments (peer evaluations, patient feedback). Algorithmic weighting ensures fair representation across diverse practice types.",
-      },
-      {
-        title: "Continuous Updates",
-        content:
-          "Ratings are updated continuously as new information becomes available. Real-time data feeds capture credential changes, new outcome reports, and emerging reviews. Quarterly comprehensive reviews ensure accuracy and relevance.",
-      },
-      {
-        title: "Transparency Standards",
-        content:
-          "The department publishes detailed documentation of rating criteria, calculation methods, and data sources. Practitioners receive notification of rating changes with detailed explanations and appeals processes.",
-      },
-    ],
-    relatedLinks: [
-      { title: "Expertise & Accreditation", href: "/accreditation" },
-      { title: "Research Publications", href: "/publications" },
-      { title: "Awards & Honors", href: "/awards" },
-    ],
-  },
-  awards: {
-    title: "Awards & Honors Department",
-    icon: <Award className="w-8 h-8" />,
-    description:
-      "The Awards & Honors Department administers recognition programs that celebrate excellence in complementary medicine practice, research, education, and service.",
-    sections: [
-      {
-        title: "Recognition Categories",
-        content:
-          "Annual awards recognize outstanding achievement in clinical practice, research innovation, educational excellence, and community service. Specialized categories honor contributions to specific modalities and populations.",
-      },
-      {
-        title: "Selection Process",
-        content:
-          "Award recipients are selected through a rigorous process involving peer nomination, documentation review, and committee evaluation. Selection committees include leading practitioners, researchers, and patient advocates.",
-      },
-      {
-        title: "Lifetime Achievement",
-        content:
-          "The Academy's highest honor, the Lifetime Achievement Award, recognizes individuals whose sustained contributions have significantly advanced the field. Recipients have typically demonstrated excellence across multiple decades and domains.",
-      },
-    ],
-    relatedLinks: [
-      { title: "Rating Monitoring", href: "/ratings" },
-      { title: "Expert Council", href: "/council" },
-      { title: "Educational Programs", href: "/education" },
-    ],
-  },
-  education: {
-    title: "Educational Programs Department",
-    icon: <GraduationCap className="w-8 h-8" />,
-    description:
-      "The Educational Programs Department develops, accredits, and delivers comprehensive training curricula for complementary medicine practitioners at all career stages.",
-    sections: [
-      {
-        title: "Curriculum Development",
-        content:
-          "Our curriculum specialists work with subject matter experts to create evidence-based educational content. Programs cover foundational knowledge, clinical skills, business practices, and specialized modalities.",
-      },
-      {
-        title: "Special Level",
-        content:
-          "The Special Level program includes advanced energy channel training. Key components include the Artra Ven block, a multichannel amplifier of the main Metatron block, designed for enhanced energetic alignment and therapeutic efficacy.",
-      },
-      {
-        title: "Higher Level",
-        content:
-          "Following Special Level, the Higher Level curriculum offers mastery-level instruction in advanced energetic channels. This program represents the pinnacle of this level's training, focusing on complex multidimensional healing modalities.",
-      },
-      {
-        title: "Institutional Accreditation",
-        content:
-          "The department evaluates educational institutions seeking Academy accreditation. Assessment criteria include faculty qualifications, curriculum rigor, clinical training facilities, and graduate outcomes.",
-      },
-      {
-        title: "Continuing Education",
-        content:
-          "Mandatory continuing education requirements ensure practitioners maintain current knowledge and skills. The department offers diverse learning formats including conferences, online courses, and clinical intensives.",
-      },
-    ],
-    relatedLinks: [
-      { title: "Expertise & Accreditation", href: "/accreditation" },
-      { title: "Scientific Research", href: "/research" },
-      { title: "Expert Council", href: "/council" },
-    ],
-  },
-  research: {
-    title: "Scientific Research Department",
-    icon: <FlaskConical className="w-8 h-8" />,
-    description:
-      "The Scientific Research Department coordinates clinical trials, basic science investigations, and systematic reviews that advance the evidence base for complementary medicine.",
-    sections: [
-      {
-        title: "Clinical Trials",
-        content:
-          "The department sponsors and coordinates randomized controlled trials examining the efficacy and safety of complementary interventions. Trial design follows international standards for scientific rigor and ethical conduct.",
-      },
-      {
-        title: "Systematic Reviews",
-        content:
-          "Regular systematic reviews synthesize existing research on specific modalities and conditions. These reviews inform clinical guidelines, educational content, and regulatory submissions.",
-      },
-      {
-        title: "Research Grants",
-        content:
-          "Competitive grant programs support investigator-initiated research addressing priority questions. Funding categories include pilot studies, full-scale trials, and methodological development projects.",
-      },
-    ],
-    relatedLinks: [
-      { title: "Research Publications", href: "/publications" },
-      { title: "Educational Programs", href: "/education" },
-      { title: "Diagnostic Methods", href: "/diagnostics" },
-    ],
-  },
-  diagnostics: {
-    title: "Diagnostic Methods Department",
-    icon: <Stethoscope className="w-8 h-8" />,
-    description:
-      "The Diagnostic Methods Department researches, standardizes, and validates complementary diagnostic approaches used in patient assessment and treatment planning.",
-    sections: [
-      {
-        title: "Diagnostic Validation",
-        content:
-          "The department conducts reliability and validity studies for diagnostic techniques used in complementary medicine. Research examines inter-rater agreement, test-retest stability, and correlation with conventional measures.",
-      },
-      {
-        title: "Standardization Efforts",
-        content:
-          "Working groups develop standardized protocols for commonly used diagnostic procedures. These protocols ensure consistency in application and interpretation across practitioners and settings.",
-      },
-      {
-        title: "Technology Integration",
-        content:
-          "Emerging diagnostic technologies are evaluated for potential integration into complementary medicine practice. Assessment criteria include accuracy, accessibility, and compatibility with existing approaches.",
-      },
-    ],
-    relatedLinks: [
-      { title: "Scientific Research", href: "/research" },
-      { title: "Expertise & Accreditation", href: "/accreditation" },
-      { title: "Educational Programs", href: "/education" },
-    ],
-  },
-  publications: {
-    title: "Research Publications Department",
-    icon: <FileText className="w-8 h-8" />,
-    description:
-      "The Research Publications Department disseminates research findings, market analyses, and rating data in formats accessible to diverse stakeholders across international and regional markets.",
-    sections: [
-      {
-        title: "Publication Types",
-        content:
-          "The department produces peer-reviewed research articles, industry reports, rating summaries, and educational materials. Publications range from technical scientific papers to accessible summaries for general audiences.",
-      },
-      {
-        title: "International Editions",
-        content:
-          "Country-specific editions adapt global data for local contexts. Regional publications incorporate local regulatory frameworks, cultural considerations, and market conditions while maintaining consistency with international standards.",
-      },
-      {
-        title: "Market Leader Reports",
-        content:
-          "Quarterly reports identify market leaders and underperformers across practitioner categories, service types, and geographic regions. These analyses support benchmarking and strategic planning.",
-      },
-    ],
-    relatedLinks: [
-      { title: "Industry Analytics", href: "/analytics" },
-      { title: "Rating Monitoring", href: "/ratings" },
-      { title: "Scientific Research", href: "/research" },
-    ],
-  },
-  council: {
-    title: "Expert Council",
-    icon: <Users className="w-8 h-8" />,
-    description:
-      "The Expert Council comprises distinguished leaders who provide strategic guidance, authoritative recommendations, and oversight for Academy initiatives.",
-    sections: [
-      {
-        title: "Council Composition",
-        content:
-          "The Council includes recognized authorities from clinical practice, academic research, healthcare policy, and patient advocacy. Members serve rotating terms and represent diverse modalities and geographic regions.",
-      },
-      {
-        title: "Advisory Functions",
-        content:
-          "Council members advise on strategic priorities, evaluate proposed initiatives, and resolve complex accreditation cases. Regular meetings address emerging issues and long-term planning.",
-      },
-      {
-        title: "Public Recommendations",
-        content:
-          "The Council issues public statements on matters of significance to the field. Recommendations address clinical practices, professional ethics, regulatory matters, and research priorities.",
-      },
-    ],
-    relatedLinks: [
-      { title: "Expertise & Accreditation", href: "/accreditation" },
-      { title: "Awards & Honors", href: "/awards" },
-      { title: "Educational Programs", href: "/education" },
-    ],
-  },
-};
+import { useTranslation } from "react-i18next";
 
 export default function Department() {
   const [, params] = useRoute("/:slug");
   const slug = params?.slug || "";
+  const { t } = useTranslation();
+
+  const departmentData: Record<
+    string,
+    {
+      title: string;
+      icon: React.ReactNode;
+      description: string;
+      sections: { title: string; content: string }[];
+      relatedLinks: { title: string; href: string }[];
+    }
+  > = {
+    analytics: {
+      title: t("departments.analytics.title"),
+      icon: <BarChart3 className="w-8 h-8" />,
+      description: t("departments.analytics.long_desc"),
+      sections: [
+        {
+          title: t("departments.analytics.sections.mission_title"),
+          content: t("departments.analytics.sections.mission_content"),
+        },
+        {
+          title: t("departments.analytics.sections.activities_title"),
+          content: t("departments.analytics.sections.activities_content"),
+        },
+        {
+          title: t("departments.analytics.sections.methodology_title"),
+          content: t("departments.analytics.sections.methodology_content"),
+        },
+      ],
+      relatedLinks: [
+        { title: t("departments.marketing.title"), href: "/marketing" },
+        { title: t("departments.publications.title"), href: "/publications" },
+        { title: t("departments.ratings.title"), href: "/ratings" },
+      ],
+    },
+    marketing: {
+      title: t("departments.marketing.title"),
+      icon: <Search className="w-8 h-8" />,
+      description: t("departments.marketing.long_desc"),
+      sections: [
+        {
+          title: t("departments.marketing.sections.focus_title"),
+          content: t("departments.marketing.sections.focus_content"),
+        },
+        {
+          title: t("departments.marketing.sections.segmentation_title"),
+          content: t("departments.marketing.sections.segmentation_content"),
+        },
+        {
+          title: t("departments.marketing.sections.analysis_title"),
+          content: t("departments.marketing.sections.analysis_content"),
+        },
+      ],
+      relatedLinks: [
+        { title: t("departments.analytics.title"), href: "/analytics" },
+        { title: t("departments.ratings.title"), href: "/ratings" },
+        { title: t("departments.council.title"), href: "/council" },
+      ],
+    },
+    accreditation: {
+      title: t("departments.accreditation.title"),
+      icon: <Building2 className="w-8 h-8" />,
+      description: t("departments.accreditation.long_desc"),
+      sections: [
+        {
+          title: t("departments.accreditation.sections.standards_title"),
+          content: t("departments.accreditation.sections.standards_content"),
+        },
+        {
+          title: t("departments.accreditation.sections.monitoring_title"),
+          content: t("departments.accreditation.sections.monitoring_content"),
+        },
+        {
+          title: t("departments.accreditation.sections.verification_title"),
+          content: t("departments.accreditation.sections.verification_content"),
+        },
+      ],
+      relatedLinks: [
+        { title: t("departments.education.title"), href: "/education" },
+        { title: t("departments.ratings.title"), href: "/ratings" },
+        { title: t("departments.council.title"), href: "/council" },
+      ],
+    },
+    ratings: {
+      title: t("departments.ratings.title"),
+      icon: <TrendingUp className="w-8 h-8" />,
+      description: t("departments.ratings.long_desc"),
+      sections: [
+        {
+          title: t("departments.ratings.sections.methodology_title"),
+          content: t("departments.ratings.sections.methodology_content"),
+        },
+        {
+          title: t("departments.ratings.sections.updates_title"),
+          content: t("departments.ratings.sections.updates_content"),
+        },
+        {
+          title: t("departments.ratings.sections.transparency_title"),
+          content: t("departments.ratings.sections.transparency_content"),
+        },
+      ],
+      relatedLinks: [
+        { title: t("departments.accreditation.title"), href: "/accreditation" },
+        { title: t("departments.publications.title"), href: "/publications" },
+        { title: t("departments.awards.title"), href: "/awards" },
+      ],
+    },
+    awards: {
+      title: t("departments.awards.title"),
+      icon: <Award className="w-8 h-8" />,
+      description: t("departments.awards.long_desc"),
+      sections: [
+        {
+          title: t("departments.awards.sections.categories_title"),
+          content: t("departments.awards.sections.categories_content"),
+        },
+        {
+          title: t("departments.awards.sections.selection_title"),
+          content: t("departments.awards.sections.selection_content"),
+        },
+        {
+          title: t("departments.awards.sections.lifetime_title"),
+          content: t("departments.awards.sections.lifetime_content"),
+        },
+      ],
+      relatedLinks: [
+        { title: t("departments.ratings.title"), href: "/ratings" },
+        { title: t("departments.council.title"), href: "/council" },
+        { title: t("departments.education.title"), href: "/education" },
+      ],
+    },
+    education: {
+      title: t("departments.education.title"),
+      icon: <GraduationCap className="w-8 h-8" />,
+      description: t("departments.education.long_desc"),
+      sections: [
+        {
+          title: t("departments.education.sections.curriculum_title"),
+          content: t("departments.education.sections.curriculum_content"),
+        },
+        {
+          title: t("departments.education.sections.special_title"),
+          content: t("departments.education.sections.special_content"),
+        },
+        {
+          title: t("departments.education.sections.higher_title"),
+          content: t("departments.education.sections.higher_content"),
+        },
+        {
+          title: t("departments.education.sections.accreditation_title"),
+          content: t("departments.education.sections.accreditation_content"),
+        },
+        {
+          title: t("departments.education.sections.continuing_title"),
+          content: t("departments.education.sections.continuing_content"),
+        },
+      ],
+      relatedLinks: [
+        { title: t("departments.accreditation.title"), href: "/accreditation" },
+        { title: t("departments.research.title"), href: "/research" },
+        { title: t("departments.council.title"), href: "/council" },
+      ],
+    },
+    research: {
+      title: t("departments.research.title"),
+      icon: <FlaskConical className="w-8 h-8" />,
+      description: t("departments.research.long_desc"),
+      sections: [
+        {
+          title: t("departments.research.sections.trials_title"),
+          content: t("departments.research.sections.trials_content"),
+        },
+        {
+          title: t("departments.research.sections.reviews_title"),
+          content: t("departments.research.sections.reviews_content"),
+        },
+        {
+          title: t("departments.research.sections.grants_title"),
+          content: t("departments.research.sections.grants_content"),
+        },
+      ],
+      relatedLinks: [
+        { title: t("departments.publications.title"), href: "/publications" },
+        { title: t("departments.education.title"), href: "/education" },
+        { title: t("departments.diagnostics.title"), href: "/diagnostics" },
+      ],
+    },
+    diagnostics: {
+      title: t("departments.diagnostics.title"),
+      icon: <Stethoscope className="w-8 h-8" />,
+      description: t("departments.diagnostics.long_desc"),
+      sections: [
+        {
+          title: t("departments.diagnostics.sections.validation_title"),
+          content: t("departments.diagnostics.sections.validation_content"),
+        },
+        {
+          title: t("departments.diagnostics.sections.standardization_title"),
+          content: t("departments.diagnostics.sections.standardization_content"),
+        },
+        {
+          title: t("departments.diagnostics.sections.tech_title"),
+          content: t("departments.diagnostics.sections.tech_content"),
+        },
+      ],
+      relatedLinks: [
+        { title: t("departments.research.title"), href: "/research" },
+        { title: t("departments.accreditation.title"), href: "/accreditation" },
+        { title: t("departments.education.title"), href: "/education" },
+      ],
+    },
+    publications: {
+      title: t("departments.publications.title"),
+      icon: <FileText className="w-8 h-8" />,
+      description: t("departments.publications.long_desc"),
+      sections: [
+        {
+          title: t("departments.publications.sections.types_title"),
+          content: t("departments.publications.sections.types_content"),
+        },
+        {
+          title: t("departments.publications.sections.editions_title"),
+          content: t("departments.publications.sections.editions_content"),
+        },
+        {
+          title: t("departments.publications.sections.reports_title"),
+          content: t("departments.publications.sections.reports_content"),
+        },
+      ],
+      relatedLinks: [
+        { title: t("departments.analytics.title"), href: "/analytics" },
+        { title: t("departments.ratings.title"), href: "/ratings" },
+        { title: t("departments.research.title"), href: "/research" },
+      ],
+    },
+    council: {
+      title: t("departments.council.title"),
+      icon: <Users className="w-8 h-8" />,
+      description: t("departments.council.long_desc"),
+      sections: [
+        {
+          title: t("departments.council.sections.composition_title"),
+          content: t("departments.council.sections.composition_content"),
+        },
+        {
+          title: t("departments.council.sections.advisory_title"),
+          content: t("departments.council.sections.advisory_content"),
+        },
+        {
+          title: t("departments.council.sections.public_title"),
+          content: t("departments.council.sections.public_content"),
+        },
+      ],
+      relatedLinks: [
+        { title: t("departments.accreditation.title"), href: "/accreditation" },
+        { title: t("departments.awards.title"), href: "/awards" },
+        { title: t("departments.education.title"), href: "/education" },
+      ],
+    },
+  };
+
   const data = departmentData[slug];
 
   if (!data) {
@@ -337,7 +298,7 @@ export default function Department() {
         <div className="text-center">
           <h1 className="text-2xl font-serif mb-4">Department Not Found</h1>
           <Link href="/" className="wiki-link">
-            Return to Main Page
+            {t("common.back_home")}
           </Link>
         </div>
       </div>
@@ -354,7 +315,7 @@ export default function Department() {
             data-testid="back-link"
           >
             <ArrowLeft className="w-4 h-4" />
-            Back to Main Page
+            {t("common.back_home")}
           </Link>
           <div className="flex items-start gap-4">
             <div className="w-14 h-14 bg-primary/10 rounded flex items-center justify-center flex-shrink-0 text-primary">
@@ -365,7 +326,7 @@ export default function Department() {
                 {data.title}
               </h1>
               <p className="text-sm text-muted-foreground">
-                American Academy of Complementary Medicine
+                {t("common.academy_name")}
               </p>
             </div>
           </div>
@@ -378,12 +339,12 @@ export default function Department() {
             <p className="text-base leading-relaxed mb-6">{data.description}</p>
 
             <div className="wiki-toc mb-6">
-              <div className="wiki-toc-title">Contents</div>
+              <div className="wiki-toc-title">{t("home.contents")}</div>
               <ol className="list-decimal list-inside space-y-1 text-sm">
                 {slug === "awards" && (
                   <li>
                     <a href="#faces-of-year" className="wiki-link">
-                      Faces of the Year 2026
+                      {t("departments.awards.faces_title")}
                     </a>
                   </li>
                 )}
@@ -399,7 +360,7 @@ export default function Department() {
                 ))}
                 <li>
                   <a href="#related" className="wiki-link">
-                    Related Departments
+                    {t("departments.related_departments")}
                   </a>
                 </li>
               </ol>
@@ -407,7 +368,7 @@ export default function Department() {
 
             {slug === "awards" && (
               <section id="faces-of-year" className="mb-8">
-                <h2 className="text-lg font-serif mb-4">Faces of the Year 2026</h2>
+                <h2 className="text-lg font-serif mb-4">{t("departments.awards.faces_title")}</h2>
                 <div className="px-12">
                   <Carousel 
                     className="w-full max-w-xl mx-auto"
@@ -454,7 +415,7 @@ export default function Department() {
             ))}
 
             <section id="related" className="mb-6">
-              <h2 className="text-lg font-serif">Related Departments</h2>
+              <h2 className="text-lg font-serif">{t("departments.related_departments")}</h2>
               <ul className="list-disc list-inside space-y-1 text-sm">
                 {data.relatedLinks.map((link) => (
                   <li key={link.href}>
@@ -473,43 +434,43 @@ export default function Department() {
                 <thead>
                   <tr>
                     <th colSpan={2} className="text-sm">
-                      Department Info
+                      {t("departments.department_info")}
                     </th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td className="font-medium text-xs">Status</td>
-                    <td className="text-xs">Active</td>
+                    <td className="font-medium text-xs">{t("common.status")}</td>
+                    <td className="text-xs">{t("common.active")}</td>
                   </tr>
                   <tr>
-                    <td className="font-medium text-xs">Staff</td>
-                    <td className="text-xs">24 professionals</td>
+                    <td className="font-medium text-xs">{t("common.staff")}</td>
+                    <td className="text-xs">{t("common.professionals")}</td>
                   </tr>
                   <tr>
-                    <td className="font-medium text-xs">Reports to</td>
-                    <td className="text-xs">Executive Director</td>
+                    <td className="font-medium text-xs">{t("common.reports_to")}</td>
+                    <td className="text-xs">{t("common.executive_director")}</td>
                   </tr>
                 </tbody>
               </table>
             </div>
 
             <div className="mt-4 p-4 bg-blue-50/50 border border-wiki-border rounded text-xs">
-              <p className="font-medium mb-2">Quick Links</p>
+              <p className="font-medium mb-2">{t("common.quick_links")}</p>
               <ul className="space-y-1">
                 <li>
                   <a href="#" className="wiki-link inline-flex items-center gap-1">
-                    Contact Department <ExternalLink className="w-3 h-3" />
+                    {t("departments.contact_dept")} <ExternalLink className="w-3 h-3" />
                   </a>
                 </li>
                 <li>
                   <a href="#" className="wiki-link inline-flex items-center gap-1">
-                    Submit Inquiry <ExternalLink className="w-3 h-3" />
+                    {t("departments.submit_inquiry")} <ExternalLink className="w-3 h-3" />
                   </a>
                 </li>
                 <li>
                   <a href="#" className="wiki-link inline-flex items-center gap-1">
-                    View Reports <ExternalLink className="w-3 h-3" />
+                    {t("departments.view_reports")} <ExternalLink className="w-3 h-3" />
                   </a>
                 </li>
               </ul>
@@ -517,11 +478,10 @@ export default function Department() {
           </aside>
         </div>
 
-        <footer className="border-t border-wiki-border pt-6 mt-8 text-xs text-muted-foreground">
-          <p className="mb-2">This page was last edited on January 11, 2026.</p>
+        <footer className="border-t border-wiki-border pt-6 mt-12 text-xs text-muted-foreground">
+          <p className="mb-2">{t("common.last_edited")}</p>
           <p>
-            Content is available under the Academy's publication guidelines
-            unless otherwise noted.
+            {t("common.copyright")}
           </p>
         </footer>
       </main>

@@ -1,56 +1,46 @@
 import { Link } from "wouter";
 import { ArrowLeft, CheckCircle, ShoppingCart } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
-interface Product {
-  title: string;
-  description: string;
-  price: string;
-  oldPrice?: string;
-  features?: string[];
-  link: string;
-}
-
-const products: Product[] = [
-  {
-    title: "BASIC 1 - 2 levels",
-    description:
-      "12 video practical lessons that activate the body's energy system",
-    price: "$250",
-    oldPrice: "$300",
-    link: "https://interpay.iain.su/store#order",
-  },
-  {
-    title: "PROFESSIONAL 3 level",
-    description:
-      "A professional level for healing sessions. 60 energy-restorative channels for any organ and body system",
-    price: "$2000",
-    link: "https://interpay.iain.su/store#order",
-  },
-  {
-    title: "MASTER 4 level",
-    description:
-      "The level of the Master. Workshops on wellness and energy Security Technologies",
-    price: "$2500",
-    link: "https://interpay.iain.su/store#order",
-  },
-  {
-    title: "MASTER - TEACHER 5 level",
-    description: "The Master - Teacher level",
-    price: "$3500",
-    oldPrice: "$5000",
-    link: "https://interpay.iain.su/store#order",
-  },
-  {
-    title: "SPECIAL Special level",
-    description:
-      "A special level for specific sessions. Group of Social, cleaning, information, energy information security channels ",
-    price: "$7000",
-    link: "https://interpay.iain.su/store#order",
-  },
-];
+import { useTranslation } from "react-i18next";
 
 export default function Price() {
+  const { t } = useTranslation();
+
+  const products = [
+    {
+      title: t("price.products.basic.title"),
+      description: t("price.products.basic.desc"),
+      price: "$250",
+      oldPrice: "$300",
+      link: "https://interpay.iain.su/store#order",
+    },
+    {
+      title: t("price.products.professional.title"),
+      description: t("price.products.professional.desc"),
+      price: "$2000",
+      link: "https://interpay.iain.su/store#order",
+    },
+    {
+      title: t("price.products.master.title"),
+      description: t("price.products.master.desc"),
+      price: "$2500",
+      link: "https://interpay.iain.su/store#order",
+    },
+    {
+      title: t("price.products.teacher.title"),
+      description: t("price.products.teacher.desc"),
+      price: "$3500",
+      oldPrice: "$5000",
+      link: "https://interpay.iain.su/store#order",
+    },
+    {
+      title: t("price.products.special.title"),
+      description: t("price.products.special.desc"),
+      price: "$7000",
+      link: "https://interpay.iain.su/store#order",
+    },
+  ];
+
   return (
     <div className="min-h-screen bg-background">
       <header className="border-b border-wiki-border bg-gradient-to-b from-blue-50/50 to-white">
@@ -60,14 +50,13 @@ export default function Price() {
             className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary mb-3"
           >
             <ArrowLeft className="w-4 h-4" />
-            Back to Main Page
+            {t("common.back_home")}
           </Link>
           <h1 className="text-2xl md:text-3xl font-serif text-foreground">
-            Educational Programs Pricing
+            {t("price.title")}
           </h1>
           <p className="text-muted-foreground text-sm md:text-base mt-2">
-            Distance learning training programs and energy practice of
-            complementary medicine
+            {t("price.subtitle")}
           </p>
         </div>
       </header>
@@ -102,7 +91,7 @@ export default function Price() {
                   <div className="w-full block">
                     <Button className="w-full gap-2 font-semibold" disabled>
                       <ShoppingCart className="w-4 h-4" />
-                      Buy Now
+                      {t("price.buy_now")}
                     </Button>
                   </div>
                 </div>
@@ -113,12 +102,10 @@ export default function Price() {
 
         <div className="mt-12 p-6 bg-slate-50 border border-wiki-border rounded-lg text-sm text-muted-foreground">
           <h4 className="font-semibold text-foreground mb-2">
-            Note regarding payments
+            {t("price.note_title")}
           </h4>
           <p>
-            You will be redirected to our secure payment partner to complete
-            your transaction. After purchase, you will receive access
-            instructions via email.
+            {t("price.note_desc")}
           </p>
         </div>
       </main>

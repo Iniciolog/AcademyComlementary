@@ -1,7 +1,10 @@
 import { Link } from "wouter";
 import { ArrowLeft } from "lucide-react";
+import { useTranslation, Trans } from "react-i18next";
 
 export default function About() {
+  const { t } = useTranslation();
+
   return (
     <div className="min-h-screen bg-background">
       <header className="border-b border-wiki-border bg-gradient-to-b from-blue-50/50 to-white">
@@ -11,10 +14,10 @@ export default function About() {
             className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary mb-3"
           >
             <ArrowLeft className="w-4 h-4" />
-            Back to Main Page
+            {t("common.back_home")}
           </Link>
           <h1 className="text-2xl md:text-3xl font-serif text-foreground">
-            Academy Information
+            {t("about.title")}
           </h1>
         </div>
       </header>
@@ -24,22 +27,22 @@ export default function About() {
             <thead>
               <tr>
                 <th colSpan={2} className="text-base p-2 bg-slate-100 font-serif">
-                  American Academy of Complementary Medicine
+                  {t("common.academy_name")}
                 </th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td className="p-2 border-b border-slate-200 font-semibold text-xs">Type</td>
-                <td className="p-2 border-b border-slate-200 text-xs">Professional Association & Research Institution</td>
+                <td className="p-2 border-b border-slate-200 font-semibold text-xs">{t("about.type")}</td>
+                <td className="p-2 border-b border-slate-200 text-xs">{t("about.type_val")}</td>
               </tr>
               <tr>
-                <td className="p-2 border-b border-slate-200 font-semibold text-xs">Headquarters</td>
-                <td className="p-2 border-b border-slate-200 text-xs">Florida, USA</td>
+                <td className="p-2 border-b border-slate-200 font-semibold text-xs">{t("about.headquarters")}</td>
+                <td className="p-2 border-b border-slate-200 text-xs">{t("about.florida_usa")}</td>
               </tr>
               <tr>
-                <td className="p-2 border-b border-slate-200 font-semibold text-xs">Fields</td>
-                <td className="p-2 border-b border-slate-200 text-xs">Complementary Medicine, Integrative Health, Research</td>
+                <td className="p-2 border-b border-slate-200 font-semibold text-xs">{t("about.fields")}</td>
+                <td className="p-2 border-b border-slate-200 text-xs">{t("about.fields_val")}</td>
               </tr>
             </tbody>
           </table>
@@ -47,27 +50,45 @@ export default function About() {
 
         <div className="prose prose-slate max-w-none">
           <p className="text-lg leading-relaxed mb-6">
-            The <strong>American Academy of Complementary Medicine (AACM)</strong> is a distinguished institution dedicated to the advancement, standardization, and scientific validation of complementary and integrative medical practices. Established to bridge traditional healing wisdom with modern scientific rigor, the Academy serves as a global hub for practitioners, researchers, and educators.
+            <Trans i18nKey="about.intro_p1">
+              The <strong>American Academy of Complementary Medicine (AACM)</strong> is a distinguished institution dedicated to the advancement, standardization, and scientific validation of complementary and integrative medical practices. Established to bridge traditional healing wisdom with modern scientific rigor, the Academy serves as a global hub for practitioners, researchers, and educators.
+            </Trans>
           </p>
 
-          <h2 className="text-xl font-serif mt-8 mb-4">Mission & Vision</h2>
+          <h2 className="text-xl font-serif mt-8 mb-4">{t("about.mission_title")}</h2>
           <p className="mb-4">
-            Our mission is to foster excellence in complementary medicine through rigorous accreditation, innovative research, and comprehensive professional development. We envision a healthcare landscape where evidence-based complementary therapies are seamlessly integrated into global health systems, providing safe, effective, and holistic care for all.
+            {t("about.mission_desc")}
           </p>
 
-          <h2 className="text-xl font-serif mt-8 mb-4">Core Functions</h2>
+          <h2 className="text-xl font-serif mt-8 mb-4">{t("about.functions_title")}</h2>
           <ul className="list-disc pl-6 space-y-2 mb-6">
-            <li><strong>Accreditation:</strong> establishing gold-standard criteria for practitioners and educational institutions.</li>
-            <li><strong>Research:</strong> Coordinating multi-center clinical trials and systematic reviews to build the evidence base.</li>
-            <li><strong>Education:</strong> Developing advanced curricula and continuing education programs for healthcare professionals.</li>
-            <li><strong>Policy:</strong> Advocating for regulatory frameworks that ensure patient safety and practice rights.</li>
+            <li>
+              <Trans i18nKey="about.functions.accreditation">
+                <strong>Accreditation:</strong> establishing gold-standard criteria for practitioners and educational institutions.
+              </Trans>
+            </li>
+            <li>
+              <Trans i18nKey="about.functions.research">
+                <strong>Research:</strong> Coordinating multi-center clinical trials and systematic reviews to build the evidence base.
+              </Trans>
+            </li>
+            <li>
+              <Trans i18nKey="about.functions.education">
+                <strong>Education:</strong> Developing advanced curricula and continuing education programs for healthcare professionals.
+              </Trans>
+            </li>
+            <li>
+              <Trans i18nKey="about.functions.policy">
+                <strong>Policy:</strong> Advocating for regulatory frameworks that ensure patient safety and practice rights.
+              </Trans>
+            </li>
           </ul>
 
-          <h2 className="text-xl font-serif mt-8 mb-4">Global Reach</h2>
-          <p className="mb-4">The Academy establishes collaborative relationships with complementary medicine organizations across 47 countries, facilitating the exchange of research data, educational resources, and professional standards. </p>
+          <h2 className="text-xl font-serif mt-8 mb-4">{t("about.reach_title")}</h2>
+          <p className="mb-4">{t("about.reach_desc")}</p>
           
           <p className="text-sm text-muted-foreground mt-8 italic">
-            Note: Further details from the official documentation are being processed and will be updated shortly.
+            {t("about.note")}
           </p>
         </div>
       </main>
