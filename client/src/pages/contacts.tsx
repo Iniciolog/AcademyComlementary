@@ -44,11 +44,11 @@ export default function Contacts() {
             <p className="text-sm text-muted-foreground mb-4">
               For general questions about the Academy, membership, or accreditation:
             </p>
-            <a href="mailto:support@aacmedinc.org" className="text-primary hover:underline font-medium">support@aacmedinc.org. americanacademyinc@gmail.com</a>
+            <a href="mailto:support@aacmedinc.org" className="text-primary hover:underline font-medium">support@aacmedinc.org. americanacademyinc@gmail.com                                           Tel. +1(786)789-9632</a>
           </div>
         </div>
 
-        <h2 className="text-xl font-serif mb-6">Department Contacts</h2>
+        <h2 className="text-xl font-serif mb-6">Department Contacts: Tel. +1(786)789-9632</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="p-4 border border-wiki-border rounded">
             <h3 className="font-semibold text-sm mb-2">Accreditation Office</h3>
