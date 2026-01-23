@@ -74,6 +74,22 @@ const associations: Association[] = [
     field: "Yoga",
     website: "yogaallianceinternational.org",
     description: "International organization promoting authentic yoga traditions and certification standards globally."
+  },
+  {
+    name: "Association of Specialists in Alternative Medicine and Wellness Practices (ASNMOP)",
+    country: "Russia",
+    city: "Moscow",
+    field: "Alternative Medicine",
+    website: "asnmop.ru",
+    description: "Professional association uniting specialists in alternative medicine and wellness practices; focuses on standards and development of the field."
+  },
+  {
+    name: "International Academy of Initiology",
+    country: "International",
+    city: "—",
+    field: "Initiology",
+    website: "iain.su",
+    description: "International academy dedicated to the study, research, and practice of initiology."
   }
 ];
 
