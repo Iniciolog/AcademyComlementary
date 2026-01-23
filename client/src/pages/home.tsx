@@ -102,10 +102,10 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background">
       <header className="border-b border-wiki-border bg-[#ffffff]">
-        <div className="max-w-6xl mx-auto px-6 py-6 pl-16 bg-[#ffffff]">
-          <div className="flex items-start gap-4">
+        <div className="max-w-6xl mx-auto px-6 py-6 md:pl-16 bg-[#ffffff]">
+          <div className="flex flex-col md:flex-row items-center md:items-start gap-4 text-center md:text-left">
             <img 
-              src={photo_2026_01_22_16_10_50} 
+              src={logoImage} 
               alt="AACM Logo" 
               className="w-20 h-20 object-cover rounded-full flex-shrink-0"
             />
