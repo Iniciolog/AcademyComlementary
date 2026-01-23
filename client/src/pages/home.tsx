@@ -162,16 +162,6 @@ export default function Home() {
           United States and establishes partnerships with institutions across 47 countries.
         </p>
 
-        <p className="text-base leading-relaxed mb-6">
-          The Academy's mission encompasses the evaluation of practitioners, the
-          certification of educational programs, and the publication of evidence-based
-          research. Through its various departments, AACM provides comprehensive
-          services including{" "}
-          <span className="wiki-link">practitioner accreditation</span>,{" "}
-          <span className="wiki-link">market analysis</span>, and{" "}
-          <span className="wiki-link">clinical research</span> coordination.
-        </p>
-
         <div className="wiki-infobox block md:hidden mb-8">
           <div className="mb-4 border-b border-wiki-border pb-4">
             <img 
@@ -202,6 +192,16 @@ export default function Home() {
             </tbody>
           </table>
         </div>
+
+        <p className="text-base leading-relaxed mb-6">
+          The Academy's mission encompasses the evaluation of practitioners, the
+          certification of educational programs, and the publication of evidence-based
+          research. Through its various departments, AACM provides comprehensive
+          services including{" "}
+          <span className="wiki-link">practitioner accreditation</span>,{" "}
+          <span className="wiki-link">market analysis</span>, and{" "}
+          <span className="wiki-link">clinical research</span> coordination.
+        </p>
 
         <div className="wiki-toc mb-8">
           <div className="wiki-toc-title">Contents</div>
