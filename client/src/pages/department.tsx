@@ -14,6 +14,7 @@ import {
   ExternalLink,
 } from "lucide-react";
 import Autoplay from "embla-carousel-autoplay";
+import lazarenkoImage from "@assets/lazarenko_new.png";
 import {
   Carousel,
   CarouselContent,
@@ -421,7 +422,7 @@ export default function Department() {
                         "https://i.ebayimg.com/00/s/OTUwWDk2Ng==/z/r-cAAOSwRJli1lIq/$_57.PNG?set_id=880000500F",
                         "https://avatars.mds.yandex.net/i?id=a6a5a1e2ffb8eaa1827eb699f1f09c2f829a9470-8261187-images-thumbs&n=13",
                         "https://avatars.dzeninfra.ru/get-zen_doc/9555919/pub_640d8046c7e3736a233175ed_640d8e5f0c912a32a1d7889f/scale_1200",
-                        "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/%D0%92%D1%8F%D1%87%D0%B5%D1%81%D0%BB%D0%B0%D0%B2_%D0%9B%D0%B0%D0%B7%D0%B0%D1%80%D0%B5%D0%BD%D0%BA%D0%BE.jpg/1200px-%D0%92%D1%8F%D1%87%D0%B5%D1%81%D0%BB%D0%B0%D0%B2_%D0%9B%D0%B0%D0%B7%D0%B0%D1%80%D0%B5%D0%BD%D0%BA%D0%BE.jpg"
+                        lazarenkoImage
                       ].map((src, index) => (
                         <CarouselItem key={index}>
                           <div className="p-1">
