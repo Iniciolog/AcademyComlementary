@@ -13,6 +13,7 @@ import {
   ArrowLeft,
   ExternalLink,
 } from "lucide-react";
+import Autoplay from "embla-carousel-autoplay";
 import {
   Carousel,
   CarouselContent,
@@ -407,12 +408,20 @@ export default function Department() {
               <section id="faces-of-year" className="mb-8">
                 <h2 className="text-lg font-serif mb-4">Faces of the Year 2026</h2>
                 <div className="px-12">
-                  <Carousel className="w-full max-w-xl mx-auto">
+                  <Carousel 
+                    className="w-full max-w-xl mx-auto"
+                    plugins={[
+                      Autoplay({
+                        delay: 3000,
+                      }),
+                    ]}
+                  >
                     <CarouselContent>
                       {[
                         "https://i.ebayimg.com/00/s/OTUwWDk2Ng==/z/r-cAAOSwRJli1lIq/$_57.PNG?set_id=880000500F",
                         "https://img-s-msn-com.akamaized.net/tenant/amp/entityid/AA1DUJHJ.img?w=1280&h=720&m=4&q=100",
-                        "https://avatars.dzeninfra.ru/get-zen_doc/1592246/pub_6020e2925fadcc22a9d7624d_6020fc985fadcc22a90ba927/scale_1200"
+                        "https://avatars.dzeninfra.ru/get-zen_doc/9555919/pub_640d8046c7e3736a233175ed_640d8e5f0c912a32a1d7889f/scale_1200",
+                        "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/%D0%92%D1%8F%D1%87%D0%B5%D1%81%D0%BB%D0%B0%D0%B2_%D0%9B%D0%B0%D0%B7%D0%B0%D1%80%D0%B5%D0%BD%D0%BA%D0%BE.jpg/1200px-%D0%92%D1%8F%D1%87%D0%B5%D1%81%D0%BB%D0%B0%D0%B2_%D0%9B%D0%B0%D0%B7%D0%B0%D1%80%D0%B5%D0%BD%D0%BA%D0%BE.jpg"
                       ].map((src, index) => (
                         <CarouselItem key={index}>
                           <div className="p-1">
