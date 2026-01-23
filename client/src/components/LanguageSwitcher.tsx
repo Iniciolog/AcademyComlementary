@@ -37,6 +37,22 @@ export function LanguageSwitcher() {
       >
         <span className="text-xl">🇷🇺</span>
       </Button>
+      {/* Dummy flags for visual effect */}
+      <Button variant="ghost" size="sm" className="h-8 w-8 p-0 rounded-full overflow-hidden opacity-50 cursor-not-allowed" title="Français (Coming soon)">
+        <span className="text-xl">🇫🇷</span>
+      </Button>
+      <Button variant="ghost" size="sm" className="h-8 w-8 p-0 rounded-full overflow-hidden opacity-50 cursor-not-allowed" title="Español (Coming soon)">
+        <span className="text-xl">🇪🇸</span>
+      </Button>
+      <Button variant="ghost" size="sm" className="h-8 w-8 p-0 rounded-full overflow-hidden opacity-50 cursor-not-allowed" title="Italiano (Coming soon)">
+        <span className="text-xl">🇮🇹</span>
+      </Button>
+      <Button variant="ghost" size="sm" className="h-8 w-8 p-0 rounded-full overflow-hidden opacity-50 cursor-not-allowed" title="中文 (Coming soon)">
+        <span className="text-xl">🇨🇳</span>
+      </Button>
+      <Button variant="ghost" size="sm" className="h-8 w-8 p-0 rounded-full overflow-hidden opacity-50 cursor-not-allowed" title="日本語 (Coming soon)">
+        <span className="text-xl">🇯🇵</span>
+      </Button>
     </div>
   );
 }
