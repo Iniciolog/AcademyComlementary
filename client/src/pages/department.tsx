@@ -14,7 +14,7 @@ import {
   ExternalLink,
 } from "lucide-react";
 import Autoplay from "embla-carousel-autoplay";
-import lazarenkoImage from "@assets/lazarenko_new.png";
+import lazarenkoImage from "@assets/lazarenko_v2.png";
 import {
   Carousel,
   CarouselContent,
