@@ -32,6 +32,11 @@ export function Footer() {
                   Price
                 </Link>
               </li>
+              <li>
+                <Link href="/associations" className="text-muted-foreground hover:text-primary transition-colors">
+                  Associations
+                </Link>
+              </li>
             </ul>
           </div>
 

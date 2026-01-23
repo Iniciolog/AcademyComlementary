@@ -12,6 +12,7 @@ import Contacts from "@/pages/contacts";
 import Privacy from "@/pages/privacy";
 import Cookies from "@/pages/cookies";
 import Registration from "@/pages/registration";
+import Associations from "@/pages/associations";
 import Price from "@/pages/price";
 import NotFound from "@/pages/not-found";
 
@@ -34,6 +35,7 @@ function Router() {
       <Route path="/privacy" component={Privacy} />
       <Route path="/cookies" component={Cookies} />
       <Route path="/registration" component={Registration} />
+      <Route path="/associations" component={Associations} />
       <Route path="/price" component={Price} />
       <Route component={NotFound} />
     </Switch>
