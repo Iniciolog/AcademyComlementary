@@ -71,18 +71,43 @@ function App() {
       <TooltipProvider>
         <Toaster />
         <Switch>
-          <Route path="/:lang(en|de|ru)/*?">
-            {(params) => <LocalizedLayout lang={(params as any).lang} />}
+          {/* Root route: Redirect to English */}
+          <Route path="/">
+            <Redirect to="/en" />
           </Route>
-          <Route path="/:lang/*?">
-             {/* If lang matches something else, or just root */}
-             {(params) => {
-                // If it looks like a valid route but no lang prefix, redirect to default (en)
-                // However, be careful with infinite loops.
-                // Simple strategy: Redirect root to /en
-                 return <Redirect to={`/en${window.location.pathname === '/' ? '' : window.location.pathname}`} />;
-             }}
+
+          {/* Catch-all route to handle language prefixes and redirection */}
+          <Route path="/:lang/:rest*">
+            {(params) => {
+              const lang = params.lang;
+              // Check if the first segment is a valid language code
+              if (['en', 'de', 'ru'].includes(lang)) {
+                return <LocalizedLayout lang={lang} />;
+              }
+              
+              // If not a language code (e.g. /about), treat it as a path and redirect to /en/...
+              // Reconstruct path: /about (lang) + /something (rest)
+              // Note: wouter types might include the asterisk in the key for wildcard params
+              const rest = (params as any).rest || (params as any)["rest*"];
+              const restPath = rest ? `/${rest}` : '';
+              const fullPath = `/${lang}${restPath}`;
+              
+              return <Redirect to={`/en${fullPath}`} />;
+            }}
           </Route>
+
+           {/* Handle case where it's just /:lang with no trailing slash/rest if needed, 
+               though :rest* usually covers it. 
+               Just in case wouter needs specific handling for single segment: */}
+           <Route path="/:segment">
+            {(params) => {
+               const segment = params.segment;
+               if (['en', 'de', 'ru'].includes(segment)) {
+                 return <LocalizedLayout lang={segment} />;
+               }
+               return <Redirect to={`/en/${segment}`} />;
+            }}
+           </Route>
         </Switch>
       </TooltipProvider>
     </QueryClientProvider>
