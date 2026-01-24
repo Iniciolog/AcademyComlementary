@@ -1,4 +1,5 @@
 import { Switch, Route, useLocation, Router as WouterRouter, Redirect } from "wouter";
+import { useHashLocation } from "wouter/use-hash-location";
 import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
@@ -48,7 +49,6 @@ function LocalizedLayout({ lang }: { lang: string }) {
   const { i18n } = useTranslation();
   
   useEffect(() => {
-    // Only change if different to avoid loops/overhead
     if (i18n.language !== lang) {
       i18n.changeLanguage(lang);
     }
@@ -70,43 +70,40 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <Toaster />
-        <Switch>
-          {/* Root redirect */}
-          <Route path="/">
-            <Redirect to="/en" />
-          </Route>
+        {/* Use HashLocation to support routing on static hosts without server-side rewrites */}
+        <WouterRouter hook={useHashLocation}>
+          <Switch>
+            {/* Root redirect */}
+            <Route path="/">
+              <Redirect to="/en" />
+            </Route>
 
-          {/* Simple match for language only: /en, /ru, /de */}
-          <Route path="/:lang">
-            {(params) => {
-              if (['en', 'de', 'ru'].includes(params.lang)) {
-                return <LocalizedLayout lang={params.lang} />;
-              }
-              // If not a language, it might be a page without lang prefix, redirect to /en/page
-              return <Redirect to={`/en/${params.lang}`} />;
-            }}
-          </Route>
+            {/* Simple match for language only: /en, /ru, /de */}
+            <Route path="/:lang">
+              {(params) => {
+                if (['en', 'de', 'ru'].includes(params.lang)) {
+                  return <LocalizedLayout lang={params.lang} />;
+                }
+                return <Redirect to={`/en/${params.lang}`} />;
+              }}
+            </Route>
 
-          {/* Match for language + subpath: /en/about, /ru/analytics */}
-          <Route path="/:lang/*">
-            {(params) => {
-               // In wouter v2, wildcard is params["*"]
-               // In some versions params[0] is used.
-               // Safer to inspect params to see what we get.
-               // Assuming standard wouter behavior with * wildcard.
-               const lang = params.lang;
-               const rest = (params as any)["*"]; // Access wildcard
+            {/* Match for language + subpath: /en/about, /ru/analytics */}
+            <Route path="/:lang/*">
+              {(params) => {
+                const lang = params.lang;
+                const rest = (params as any)["*"];
 
-               if (['en', 'de', 'ru'].includes(lang)) {
-                 return <LocalizedLayout lang={lang} />;
-               }
-               
-               // If first segment isn't a language, assume it's part of the path
-               const fullPath = rest ? `/${lang}/${rest}` : `/${lang}`;
-               return <Redirect to={`/en${fullPath}`} />;
-            }}
-          </Route>
-        </Switch>
+                if (['en', 'de', 'ru'].includes(lang)) {
+                  return <LocalizedLayout lang={lang} />;
+                }
+                
+                const fullPath = rest ? `/${lang}/${rest}` : `/${lang}`;
+                return <Redirect to={`/en${fullPath}`} />;
+              }}
+            </Route>
+          </Switch>
+        </WouterRouter>
       </TooltipProvider>
     </QueryClientProvider>
   );

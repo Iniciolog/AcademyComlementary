@@ -14,13 +14,12 @@ export function LanguageSwitcher() {
   const [location] = useLocation();
 
   const toggleLanguage = (lang: string) => {
-    // Construct new path: /lang/current-sub-path
-    // location from wouter is relative to the base (e.g. /analytics)
-    // We want to navigate to /new-lang/analytics
-    const newPath = `/${lang}${location === '/' ? '' : location}`;
-    
-    // Force a full page reload/navigation to ensure the top-level router picks up the new base
-    window.location.href = newPath;
+    // We are inside a nested router with a base (e.g. /en)
+    // location is relative to that base (e.g. /about)
+    // We want to switch the entire hash path to /new-lang/about
+    const path = location === '/' ? '' : location;
+    // Update hash directly to trigger top-level router change
+    window.location.hash = `/${lang}${path}`;
   };
 
   const languages = [
