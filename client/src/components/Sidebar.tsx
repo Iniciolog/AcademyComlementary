@@ -100,6 +100,12 @@ export function Sidebar() {
       >
         <Menu className="w-5 h-5 text-foreground" />
       </button>
+      
+      {/* Global Language Switcher - Fixed Top Right */}
+      <div className="fixed top-4 right-4 z-50 bg-white/80 backdrop-blur-sm rounded-full border border-wiki-border shadow-sm hover:shadow-md transition-shadow">
+        <LanguageSwitcher />
+      </div>
+
       {isOpen && (
         <div
           data-testid="sidebar-overlay"
