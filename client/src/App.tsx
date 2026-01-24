@@ -71,43 +71,41 @@ function App() {
       <TooltipProvider>
         <Toaster />
         <Switch>
-          {/* Root route: Redirect to English */}
+          {/* Root redirect */}
           <Route path="/">
             <Redirect to="/en" />
           </Route>
 
-          {/* Catch-all route to handle language prefixes and redirection */}
-          <Route path="/:lang/:rest*">
+          {/* Simple match for language only: /en, /ru, /de */}
+          <Route path="/:lang">
             {(params) => {
-              const lang = params.lang;
-              // Check if the first segment is a valid language code
-              if (['en', 'de', 'ru'].includes(lang)) {
-                return <LocalizedLayout lang={lang} />;
+              if (['en', 'de', 'ru'].includes(params.lang)) {
+                return <LocalizedLayout lang={params.lang} />;
               }
-              
-              // If not a language code (e.g. /about), treat it as a path and redirect to /en/...
-              // Reconstruct path: /about (lang) + /something (rest)
-              // Note: wouter types might include the asterisk in the key for wildcard params
-              const rest = (params as any).rest || (params as any)["rest*"];
-              const restPath = rest ? `/${rest}` : '';
-              const fullPath = `/${lang}${restPath}`;
-              
-              return <Redirect to={`/en${fullPath}`} />;
+              // If not a language, it might be a page without lang prefix, redirect to /en/page
+              return <Redirect to={`/en/${params.lang}`} />;
             }}
           </Route>
 
-           {/* Handle case where it's just /:lang with no trailing slash/rest if needed, 
-               though :rest* usually covers it. 
-               Just in case wouter needs specific handling for single segment: */}
-           <Route path="/:segment">
+          {/* Match for language + subpath: /en/about, /ru/analytics */}
+          <Route path="/:lang/*">
             {(params) => {
-               const segment = params.segment;
-               if (['en', 'de', 'ru'].includes(segment)) {
-                 return <LocalizedLayout lang={segment} />;
+               // In wouter v2, wildcard is params["*"]
+               // In some versions params[0] is used.
+               // Safer to inspect params to see what we get.
+               // Assuming standard wouter behavior with * wildcard.
+               const lang = params.lang;
+               const rest = (params as any)["*"]; // Access wildcard
+
+               if (['en', 'de', 'ru'].includes(lang)) {
+                 return <LocalizedLayout lang={lang} />;
                }
-               return <Redirect to={`/en/${segment}`} />;
+               
+               // If first segment isn't a language, assume it's part of the path
+               const fullPath = rest ? `/${lang}/${rest}` : `/${lang}`;
+               return <Redirect to={`/en${fullPath}`} />;
             }}
-           </Route>
+          </Route>
         </Switch>
       </TooltipProvider>
     </QueryClientProvider>
