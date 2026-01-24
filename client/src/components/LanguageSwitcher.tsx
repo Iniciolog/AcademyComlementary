@@ -7,12 +7,20 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { ChevronDown } from "lucide-react";
+import { useLocation } from "wouter";
 
 export function LanguageSwitcher() {
   const { i18n } = useTranslation();
+  const [location] = useLocation();
 
   const toggleLanguage = (lang: string) => {
-    i18n.changeLanguage(lang);
+    // Construct new path: /lang/current-sub-path
+    // location from wouter is relative to the base (e.g. /analytics)
+    // We want to navigate to /new-lang/analytics
+    const newPath = `/${lang}${location === '/' ? '' : location}`;
+    
+    // Force a full page reload/navigation to ensure the top-level router picks up the new base
+    window.location.href = newPath;
   };
 
   const languages = [
