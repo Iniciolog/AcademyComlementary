@@ -2,8 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "wouter";
 import { Menu, X, Building2, BarChart3, Search, Award, GraduationCap, FlaskConical, Stethoscope, FileText, Users, ChevronDown, ChevronRight } from "lucide-react";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import logoImage from "@assets/1111111111 (1).png";
-import _1111111111__1_ from "@assets/1111111111 (1).png";
+import logoImage from "@assets/IMG_0283_1768202691005.jpeg";
 
 interface NavItem {
   title: string;
@@ -97,6 +96,7 @@ export function Sidebar() {
       >
         <Menu className="w-5 h-5 text-foreground" />
       </button>
+
       {isOpen && (
         <div
           data-testid="sidebar-overlay"
@@ -104,15 +104,16 @@ export function Sidebar() {
           onClick={() => setIsOpen(false)}
         />
       )}
+
       <aside
         data-testid="sidebar"
         className={`fixed top-0 left-0 z-50 h-full w-80 bg-white border-r border-wiki-border shadow-xl transform transition-transform duration-300 ease-in-out ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
-        <div className="flex items-center justify-between p-4 border-b border-wiki-border bg-[#ffffff]">
+        <div className="flex items-center justify-between p-4 border-b border-wiki-border bg-gradient-to-r from-blue-50 to-white">
           <div className="flex items-center gap-3">
-            <img src={_1111111111__1_} alt="AACM" className="w-10 h-10 object-cover rounded-full" />
+            <img src={logoImage} alt="AACM" className="w-10 h-10 object-cover rounded-full" />
             <div>
               <h2 className="font-serif text-sm font-semibold text-black border-none pb-0 mb-0 leading-tight">
                 American Academy of Complementary Medicine
@@ -135,7 +136,11 @@ export function Sidebar() {
               href="/"
               onClick={() => setIsOpen(false)}
               data-testid="nav-home"
-              className="flex items-center gap-3 px-3 py-2.5 rounded text-sm mb-1 transition-colors text-primary font-medium bg-[#e8ecef]"
+              className={`flex items-center gap-3 px-3 py-2.5 rounded text-sm mb-1 transition-colors ${
+                location === "/"
+                  ? "bg-blue-50 text-primary font-medium"
+                  : "hover:bg-muted text-foreground"
+              }`}
             >
               <Building2 className="w-4 h-4" />
               Main Page
@@ -197,17 +202,6 @@ export function Sidebar() {
               </div>
             ))}
 
-            <div className="my-3 border-t border-wiki-border" />
-            
-            <a 
-              href="https://platform.aacmedinc.org/members/login" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 mx-3 py-2.5 bg-primary text-primary-foreground rounded text-sm font-medium hover:bg-primary/90 transition-colors mb-2 shadow-sm"
-            >
-              Log in / Sign up
-            </a>
-
             <div className="my-4 border-t border-wiki-border" />
 
             <div className="px-3 py-2 text-xs text-muted-foreground">
@@ -216,7 +210,7 @@ export function Sidebar() {
                 advancing the field through research, education, and
                 professional standards.
               </p>
-              <p className="text-[11px]">© 2026 AACM. All rights reserved.</p>
+              <p className="text-[11px]">© 2024 AACM. All rights reserved.</p>
             </div>
           </nav>
         </ScrollArea>

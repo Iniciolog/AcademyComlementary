@@ -12,18 +12,7 @@ import {
   TrendingUp,
   CheckCircle,
 } from "lucide-react";
-import logoImage from "@assets/1111111111 (1).png";
-import groupPhoto from "@assets/IMG_1514_(1)_1769125494892.jpg";
-
-import e3e30799f77d11f093ff9e3e85b3e775_4 from "@assets/e3e30799f77d11f093ff9e3e85b3e775_4.png";
-
-import _77777 from "@assets/77777.png";
-
-import e3e30799f77d11f093ff9e3e85b3e775_2 from "@assets/e3e30799f77d11f093ff9e3e85b3e775_2.png";
-
-import photo_2026_01_22_16_10_52 from "@assets/photo_2026-01-22 16.10.52.jpeg";
-
-import photo_2026_01_22_16_10_50 from "@assets/photo_2026-01-22 16.10.50.jpeg";
+import logoImage from "@assets/IMG_0283_1768202691005.jpeg";
 
 const departments = [
   {
@@ -101,9 +90,9 @@ const departments = [
 export default function Home() {
   return (
     <div className="min-h-screen bg-background">
-      <header className="border-b border-wiki-border bg-[#ffffff]">
-        <div className="max-w-6xl mx-auto px-6 py-6 md:pl-16 bg-[#ffffff]">
-          <div className="flex flex-col md:flex-row items-center md:items-start gap-4 text-center md:text-left">
+      <header className="border-b border-wiki-border bg-gradient-to-b from-blue-50/50 to-white">
+        <div className="max-w-6xl mx-auto px-6 py-6 pl-16">
+          <div className="flex items-start gap-4">
             <img 
               src={logoImage} 
               alt="AACM Logo" 
@@ -120,21 +109,13 @@ export default function Home() {
           </div>
         </div>
       </header>
+
       <main className="max-w-6xl mx-auto px-6 py-8 pl-16">
         <div className="wiki-infobox hidden md:block">
-          <div className="mb-4 border-b border-wiki-border pb-4">
-            <img 
-              src={groupPhoto} 
-              alt="Professional Collective of the Academy" 
-              className="w-full h-auto rounded shadow-sm"
-            />
-            <p className="text-xs text-center mt-2 italic text-[#000000] bg-[#f1f2f2]">Professional Collective of the Academy 
-            7901 4TH ST N, STE 300 ST PETERSBURG</p>
-          </div>
           <table className="w-full">
             <thead>
               <tr>
-                <th colSpan={2} className="text-base bg-[#eeefe8]">
+                <th colSpan={2} className="text-base">
                   Academy Overview
                 </th>
               </tr>
@@ -142,11 +123,23 @@ export default function Home() {
             <tbody>
               <tr>
                 <td className="font-medium">Headquarters</td>
-                <td>Florida, USA</td>
+                <td>Hollywood, Florida</td>
               </tr>
               <tr>
                 <td className="font-medium">Focus</td>
                 <td>Complementary Medicine</td>
+              </tr>
+              <tr>
+                <td className="font-medium">Members</td>
+                <td>15,000+</td>
+              </tr>
+              <tr>
+                <td className="font-medium">Affiliated Institutions</td>
+                <td>340+</td>
+              </tr>
+              <tr>
+                <td className="font-medium">Countries</td>
+                <td>47</td>
               </tr>
             </tbody>
           </table>
@@ -159,39 +152,8 @@ export default function Home() {
           research, comprehensive education, and the establishment of professional
           standards. The Academy serves as the primary accrediting
           body and research institution for complementary medical practices in the
-          United States and establishes partnerships with institutions across 47 countries.
+          United States and maintains partnerships with institutions across 47 countries.
         </p>
-
-        <div className="wiki-infobox block md:hidden mb-8">
-          <div className="mb-4 border-b border-wiki-border pb-4">
-            <img 
-              src={groupPhoto} 
-              alt="Professional Collective of the Academy" 
-              className="w-full h-auto rounded shadow-sm"
-            />
-            <p className="text-xs text-center mt-2 italic text-[#000000] bg-[#f1f2f2]">Professional Collective of the Academy 
-            7901 4TH ST N, STE 300 ST PETERSBURG</p>
-          </div>
-          <table className="w-full">
-            <thead>
-              <tr>
-                <th colSpan={2} className="text-base bg-[#eeefe8]">
-                  Academy Overview
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td className="font-medium">Headquarters</td>
-                <td>Florida, USA</td>
-              </tr>
-              <tr>
-                <td className="font-medium">Focus</td>
-                <td>Complementary Medicine</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
 
         <p className="text-base leading-relaxed mb-6">
           The Academy's mission encompasses the evaluation of practitioners, the
@@ -330,7 +292,7 @@ export default function Home() {
             International Partnerships
           </h2>
           <p className="text-base leading-relaxed">
-            The Academy establishes collaborative relationships with complementary
+            The Academy maintains collaborative relationships with complementary
             medicine organizations across 47 countries, facilitating the exchange of
             research data, educational resources, and professional standards. Key
             partnership regions include the European Union, Asia-Pacific, and Latin
